@@ -189,6 +189,8 @@ Giovanni = 0x2d
 Rival = 0x78
 Champ = 0x76
 Mewtwo = 0xe3
+Lapras = 0xd4
+Tangela = 0xa8
 
 function Farfetch() => bit4(0xd737)
 function MrMime() => bit1(0xd737)
@@ -199,6 +201,7 @@ function Lapras() => bit0(0xd72e)
 function Eevee() => bit5(0xd5ae)
 function Hitmonlee() => bit6(0xd7b1)
 function Hitmonchan() => bit7(0xd7b1)
+function Tangela() => bit0(0xd738)
 
 Badges = {
 "Brock":bit0(0xd356),
@@ -269,169 +272,170 @@ function Fourth() => pokedex["Ponyta"]+pokedex["Rapidash"]+pokedex["Magnemite"]+
                      pokedex["Tangela"]+pokedex["Aerodactyl"]+pokedex["Zapdos"]+pokedex["Electabuzz"]+pokedex["Omanyte"]+
                      pokedex["Omastar"]+pokedex["Kabuto"]+pokedex["Kabutops"]
 
-achievement ("Charmander, Bulbasaur or Squirtle", "Choose your starter", 1,
+achievement ("Charmander, Bulbasaur or Squirtle", "Choose your starter", 1, id = 165606, badge = "186441",
     trigger = Map() == Oaks && choosestarter())
     
-achievement ("Charmeleon, Ivysaur or Wartortle", "Evolve your starter", 2,
+achievement ("Charmeleon, Ivysaur or Wartortle", "Evolve your starter", 2, id = 165607, badge = "186442",
     trigger = Evo() && Map() != Oaks &&
               (always_false() || 
               prev(pokedex["Charmander"]) == 0x01 && pokedex["Charmeleon"] > prev(pokedex["Charmeleon"]) ||
               prev(pokedex["Bulbasaur"]) == 0x01 && pokedex["Ivysaur"] > prev(pokedex["Ivysaur"]) ||
               prev(pokedex["Squirtle"]) == 0x01 && pokedex["Wartortle"] > prev(pokedex["Wartortle"])))
  
-achievement ("Charizard, Venusaur or Blastoise", "Fully evolve your starter", 3,
+achievement ("Charizard, Venusaur or Blastoise", "Fully evolve your starter", 3, id = 165608, badge = "186443",
     trigger = Evo() && Badges() == 0x00 && 
               (always_false() || 
               prev(pokedex["Charmeleon"]) == 0x01 && pokedex["Charizard"] > prev(pokedex["Charizard"]) ||
               prev(pokedex["Ivysaur"]) == 0x01 && pokedex["Venusaur"] > prev(pokedex["Venusaur"]) ||
               prev(pokedex["Wartortle"]) == 0x01 && pokedex["Blastoise"] > prev(pokedex["Blastoise"]))) 
    
-achievement ("Caterpie", "Obtain Caterpie", 1,
+achievement ("Caterpie", "Obtain Caterpie", 1, id = 165609, badge = "186444",
     trigger = Badges() == 0x00 && pokedex["Caterpie"] > prev(pokedex["Caterpie"]) && Catch())
 
-achievement ("Metapod", "Obtain Metapod", 2,
+achievement ("Metapod", "Obtain Metapod", 2, id = 165610, badge = "186445",
     trigger = Title() && Badges() == 0x00 && 
               (always_false() || 
               pokedex["Metapod"] > prev(pokedex["Metapod"]) && Catch() ||
               prev(pokedex["Caterpie"]) == 0x01 && Evo() && pokedex["Metapod"] > prev(pokedex["Metapod"])))
               
-achievement ("Butterfree", "Obtain Butterfree", 3,
+achievement ("Butterfree", "Obtain Butterfree", 3, id = 165611, badge = "186446",
     trigger = Badges() == 0x00 && prev(pokedex["Metapod"]) == 0x01 && Evo() && pokedex["Butterfree"] > prev(pokedex["Butterfree"]))
 
-achievement ("Weedle", "Obtain Weedle", 1,
+achievement ("Weedle", "Obtain Weedle", 1, id = 165612, badge = "186447",
     trigger = Badges() == 0x00 && pokedex["Weedle"] > prev(pokedex["Weedle"]) && Catch())
     
-achievement ("Kakuna", "Obtain Kakuna", 2,
+achievement ("Kakuna", "Obtain Kakuna", 2, id = 165613, badge = "186448",
     trigger = Badges() == 0x00 && 
               (always_false() || 
               pokedex["Kakuna"] > prev(pokedex["Kakuna"]) && Catch() ||
               prev(pokedex["Weedle"]) == 0x01 && Evo() && pokedex["Kakuna"] > prev(pokedex["Kakuna"])))
               
-achievement ("Beedrill", "Obtain Beedrill", 3,
+achievement ("Beedrill", "Obtain Beedrill", 3, id = 165614, badge = "186449",
     trigger = Badges() == 0x00 && prev(pokedex["Kakuna"]) == 0x01 && Evo() && pokedex["Beedrill"] > prev(pokedex["Beedrill"]))
     
-achievement ("Pidgey", "Obtain Pidgey", 1,
+achievement ("Pidgey", "Obtain Pidgey", 1, id = 165615, badge = "186450",
     trigger = Badges() == 0x00 && pokedex["Pidgey"] > prev(pokedex["Pidgey"]) && Catch())
     
-achievement ("Pidgeotto", "Obtain Pidgeotto", 2,
+achievement ("Pidgeotto", "Obtain Pidgeotto", 2, id = 165616, badge = "186451",
     trigger = Badges() == 0x00 && Evo() && prev(pokedex["Pidgey"]) == 0x01 && pokedex["Pidgeotto"] > prev(pokedex["Pidgeotto"]))
     
-achievement ("Pidgeot", "Obtain Pidgeot", 3,
+achievement ("Pidgeot", "Obtain Pidgeot", 3, id = 165617, badge = "186452",
     trigger = Badges() == 0x00 && Evo() && prev(pokedex["Pidgeotto"]) == 0x01 && pokedex["Pidgeot"] > prev(pokedex["Pidgeot"]))
     
-achievement ("Rattata", "Obtain Rattata", 1,
+achievement ("Rattata", "Obtain Rattata", 1, id = 165618, badge = "186453",
     trigger = Badges() == 0x00 && pokedex["Rattata"] > prev(pokedex["Rattata"]) && Catch())    
     
-achievement ("Raticate", "Obtain Raticate", 2,
+achievement ("Raticate", "Obtain Raticate", 2, id = 165619, badge = "186454",
     trigger = Badges() == 0x00 && Evo() && prev(pokedex["Rattata"]) == 0x01 && pokedex["Raticate"] > prev(pokedex["Raticate"]))
     
-achievement ("Spearow", "Obtain Spearow", 1,
+achievement ("Spearow", "Obtain Spearow", 1, id = 165620, badge = "186455",
     trigger = Badges() == 0x00 && pokedex["Spearow"] > prev(pokedex["Spearow"]) && Catch())    
     
-achievement ("Fearow", "Obtain Fearow", 2,
+achievement ("Fearow", "Obtain Fearow", 2, id = 165621, badge = "186456",
     trigger = Badges() == 0x00 && Evo() && prev(pokedex["Spearow"]) == 0x01 && pokedex["Fearow"] > prev(pokedex["Fearow"]))
     
-achievement ("Pikachu", "Obtain Pikachu", 1,
+achievement ("Pikachu", "Obtain Pikachu", 1, id = 165622, badge = "186457",
     trigger = Badges() == 0x00 && pokedex["Pikachu"] > prev(pokedex["Pikachu"]) && Catch()) 
     
-achievement ("NidoranF", "Obtain NidoranF", 1,
+achievement ("NidoranF", "Obtain NidoranF", 1, id = 165623, badge = "186458",
     trigger = Badges() == 0x00 && pokedex["NidoranF"] > prev(pokedex["NidoranF"]) && Catch()) 
     
-achievement ("Nidorina", "Obtain Nidorina", 2,
+achievement ("Nidorina", "Obtain Nidorina", 2, id = 165624, badge = "186459",
     trigger = Badges() == 0x00 && prev(pokedex["NidoranF"]) == 0x01 && Evo() && pokedex["Nidorina"] > prev(pokedex["Nidorina"]))   
     
-achievement ("NidoranM", "Obtain NidoranM", 1,
+achievement ("NidoranM", "Obtain NidoranM", 1, id = 165625, badge = "186460",
     trigger = Badges() == 0x00 && pokedex["NidoranM"] > prev(pokedex["NidoranM"]) && Catch()) 
     
-achievement ("Nidorino", "Obtain Nidorino", 2,
+achievement ("Nidorino", "Obtain Nidorino", 2, id = 165626, badge = "186461",
     trigger = Badges() == 0x00 && prev(pokedex["NidoranM"]) == 0x01 && Evo() && pokedex["Nidorino"] > prev(pokedex["Nidorino"]))   
     
-achievement ("Badge I", "Obtain the Boulder Badge from Brock with all 21 possible Pokemon obtained", 10,
+achievement ("Badge I", "Obtain the Boulder Badge from Brock with all 21 possible Pokemon obtained", 10, id = 165627, badge = "186462",
     trigger = Map() == Brock && trigger_when(Badges() > prev(Badges())) && First() == 0x12 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
-achievement ("Clefairy", "Obtain Clefairy", 1,
+achievement ("Clefairy", "Obtain Clefairy", 1, id = 165628, badge = "186463",
     trigger = Badges() == 0x01 && pokedex["Clefairy"] > prev(pokedex["Clefairy"]) && Catch()) 
     
-achievement ("Jigglypuff", "Obtain Jigglypuff", 1,
+achievement ("Jigglypuff", "Obtain Jigglypuff", 1, id = 165629, badge = "186464",
     trigger = Badges() == 0x01 && pokedex["Jigglypuff"] > prev(pokedex["Jigglypuff"]) && Catch()) 
     
-achievement ("Zubat", "Obtain Zubat", 1,
+achievement ("Zubat", "Obtain Zubat", 1, id = 165630, badge = "186465",
     trigger = Badges() == 0x01 && pokedex["Zubat"] > prev(pokedex["Zubat"]) && Catch())
     
-achievement ("Golbat", "Obtain Golbat", 2,
+achievement ("Golbat", "Obtain Golbat", 2, id = 165631, badge = "186466",
     trigger = Badges() == 0x01 && prev(pokedex["Zubat"]) == 0x01 && Evo() && pokedex["Golbat"] > prev(pokedex["Golbat"]))
     
-achievement ("Paras", "Obtain Paras", 1,
+achievement ("Paras", "Obtain Paras", 1, id = 165632, badge = "186467",
     trigger = Badges() == 0x01 && pokedex["Paras"] > prev(pokedex["Paras"]) && Catch())
     
-achievement ("Parasect", "Obtain Parasect", 2,
+achievement ("Parasect", "Obtain Parasect", 2, id = 165633, badge = "186468",
     trigger = Badges() == 0x01 && prev(pokedex["Paras"]) == 0x01 && Evo() && pokedex["Parasect"] > prev(pokedex["Parasect"]))
     
-achievement ("Diglett", "Obtain Diglett", 1,
+achievement ("Diglett", "Obtain Diglett", 1, id = 165634, badge = "186469",
     trigger = Badges() == 0x01 && pokedex["Diglett"] > prev(pokedex["Diglett"]) && Catch())
     
-achievement ("Dugtrio", "Obtain Dugtrio", 2,
+achievement ("Dugtrio", "Obtain Dugtrio", 2, id = 165635, badge = "186470",
     trigger = Badges() == 0x01 && 
               (always_false() || 
               prev(pokedex["Diglett"]) == 0x01 && Evo() && pokedex["Dugtrio"] > prev(pokedex["Dugtrio"]) ||
               pokedex["Dugtrio"] > prev(pokedex["Dugtrio"]) && Catch()))
-achievement ("Abra", "Obtain Abra", 1,
+              
+achievement ("Abra", "Obtain Abra", 1, id = 165636, badge = "186471",
     trigger = Badges() == 0x01 && pokedex["Abra"] > prev(pokedex["Abra"]) && Catch())
     
-achievement ("Kadabra", "Obtain Kadabra", 2,
+achievement ("Kadabra", "Obtain Kadabra", 2, id = 165637, badge = "186472",
     trigger = Badges() == 0x01 && prev(pokedex["Abra"]) == 0x01 && 
               (always_false() || 
               Evo() && prev(pokedex["Abra"]) == 0x01 && pokedex["Kadabra"] > prev(pokedex["Kadabra"]) ||
               prev(pokedex["Abra"]) == 0x01 && prior(LearnEvo()) == 0x00 && pokedex["Kadabra"] > prev(pokedex["Kadabra"])))
     
-achievement ("Geodude", "Obtain Geodude", 1,
+achievement ("Geodude", "Obtain Geodude", 1, id = 165638, badge = "186473",
     trigger = Badges() == 0x01 && pokedex["Geodude"] > prev(pokedex["Geodude"]) && Catch())
     
-achievement ("Graveler", "Obtain Graveler", 2,
+achievement ("Graveler", "Obtain Graveler", 2, id = 165639, badge = "186474",
     trigger = Badges() == 0x01 && prev(pokedex["Geodude"]) == 0x01 && Evo() && pokedex["Graveler"] > prev(pokedex["Graveler"]))
     
-achievement ("Farfetch'd", "Obtain Farfetch'd", 1,
+achievement ("Farfetch'd", "Obtain Farfetch'd", 1, id = 165640, badge = "186475",
     trigger = Badges() == 0x01 && Map() == Spearow && Farfetch() > prev(Farfetch()))
     
-achievement ("Drowzee", "Obtain Drowzee", 1,
+achievement ("Drowzee", "Obtain Drowzee", 1, id = 165641, badge = "186476",
     trigger = Badges() == 0x01 && pokedex["Drowzee"] > prev(pokedex["Drowzee"]) && Catch())
     
-achievement ("Hypno", "Obtain Hypno", 2,
+achievement ("Hypno", "Obtain Hypno", 2, id = 165642, badge = "186477",
     trigger = Badges() == 0x01 && prev(pokedex["Drowzee"]) == 0x01 && Evo() && pokedex["Hypno"] > prev(pokedex["Hypno"]))
     
-achievement ("Mr.Mime", "Obtain Mr.Mime", 1,
+achievement ("Mr.Mime", "Obtain Mr.Mime", 1, id = 165643, badge = "186478",
     trigger = Badges() == 0x01 && Map() == Mime && MrMime() > prev(MrMime()))
     
-achievement ("Magikarp", "Obtain Magikarp", 1,
+achievement ("Magikarp", "Obtain Magikarp", 1, id = 165644, badge = "186479",
     trigger = Badges() == 0x01 && 
               (always_false() ||
               pokedex["Magikarp"] > prev(pokedex["Magikarp"]) && Catch() ||
               Map() == Karp && Karp() > prev(Karp())))
     
-achievement ("Gyarados", "Obtain Gyarados", 2,
+achievement ("Gyarados", "Obtain Gyarados", 2, id = 165645, badge = "186480",
     trigger = Badges() == 0x01 && prev(pokedex["Magikarp"]) == 0x01 && Evo() && pokedex["Gyarados"] > prev(pokedex["Gyarados"]))
     
-achievement ("Ekans", "Obtain Ekans", 1,
+achievement ("Ekans", "Obtain Ekans", 1, id = 165646, badge = "186481",
     trigger = Badges() == 0x01 && pokedex["Ekans"] > prev(pokedex["Ekans"]) && Catch())
     
-achievement ("Arbok", "Obtain Arbok", 2,
+achievement ("Arbok", "Obtain Arbok", 2, id = 165647, badge = "186482",
     trigger = Badges() == 0x01 && prev(pokedex["Ekans"]) == 0x01 && Evo() && pokedex["Arbok"] > prev(pokedex["Arbok"]))   
   
-achievement ("Oddish", "Obtain Oddish", 1,
+achievement ("Oddish", "Obtain Oddish", 1, id = 165648, badge = "186483",
     trigger = Badges() == 0x01 && pokedex["Oddish"] > prev(pokedex["Oddish"]) && Catch())
     
-achievement ("Gloom", "Obtain Gloom", 2,
+achievement ("Gloom", "Obtain Gloom", 2, id = 165649, badge = "186484",
     trigger = Badges() == 0x01 && prev(pokedex["Oddish"]) == 0x01 && Evo() && pokedex["Gloom"] > prev(pokedex["Gloom"]))  
     
-achievement ("Mankey", "Obtain Mankey", 1,
+achievement ("Mankey", "Obtain Mankey", 1, id = 165650, badge = "186485",
     trigger = Badges() == 0x01 && pokedex["Mankey"] > prev(pokedex["Mankey"]) && Catch())
     
-achievement ("Primeape", "Obtain Primeape", 2,
+achievement ("Primeape", "Obtain Primeape", 2, id = 165651, badge = "186486",
     trigger = Badges() == 0x01 && prev(pokedex["Mankey"]) == 0x01 && Evo() && pokedex["Primeape"] > prev(pokedex["Primeape"]))
     
-achievement ("Moonstone I", "Obtain one of the following Nidoking/Nidoqueen/Clefable/Wigglytuff", 3,
+achievement ("Moonstone I", "Obtain one of the following Nidoking, Nidoqueen, Clefable or Wigglytuff", 3, id = 165652, badge = "186487",
     trigger = Badges() == 0x01 && prev(pokedex["Nidoking"]+pokedex["Nidoqueen"]+pokedex["Clefable"]+pokedex["Wigglytuff"]) == 0x00 && 
               (always_false() || 
               prev(pokedex["Nidorino"]) == 0x01 && Evo() && pokedex["Nidoking"] > prev(pokedex["Nidoking"]) ||
@@ -439,7 +443,7 @@ achievement ("Moonstone I", "Obtain one of the following Nidoking/Nidoqueen/Clef
               prev(pokedex["Clefairy"]) == 0x01 && Evo() && pokedex["Clefable"] > prev(pokedex["Clefable"]) ||
               prev(pokedex["Jigglypuff"]) == 0x01 && Evo() && pokedex["Wigglytuff"] > prev(pokedex["Wigglytuff"])))
               
-achievement ("Moonstone II", "Obtain one of the following Nidoking/Nidoqueen/Clefable/Wigglytuff", 3,
+achievement ("Moonstone II", "Obtain one of the following Nidoking, Nidoqueen, Clefable or Wigglytuff", 3, id = 165653, badge = "186488",
     trigger = Badges() == 0x01 &&  prev(pokedex["Nidoking"]+pokedex["Nidoqueen"]+pokedex["Clefable"]+pokedex["Wigglytuff"]) == 0x01 && 
               (always_false() || 
               prev(pokedex["Nidorino"]) == 0x01 && Evo() && pokedex["Nidoking"] > prev(pokedex["Nidoking"]) ||
@@ -447,216 +451,218 @@ achievement ("Moonstone II", "Obtain one of the following Nidoking/Nidoqueen/Cle
               prev(pokedex["Clefairy"]) == 0x01 && Evo() && pokedex["Clefable"] > prev(pokedex["Clefable"]) ||
               prev(pokedex["Jigglypuff"]) == 0x01 && Evo() && pokedex["Wigglytuff"] > prev(pokedex["Wigglytuff"])))
               
-achievement ("Badge II", "Obtain the Cascade Badge from Misty with all 47 possible Pokemon obtained", 10,
+achievement ("Badge II", "Obtain the Cascade Badge from Misty with all 47 possible Pokemon obtained", 10, id = 165654, badge = "186489",
     trigger = (Map() == Misty) && trigger_when(Badges() > prev(Badges())) && First()+Second()+Red1() == 0x2a && pokedex["Nidoqueen"]+pokedex["Nidoking"]+pokedex["Clefable"]+pokedex["Wigglytuff"] == 0x02 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
-achievement ("Raichu", "Obtain Raichu", 2,
+achievement ("Raichu", "Obtain Raichu", 2, id = 165655, badge = "186490",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && prev(pokedex["Pikachu"]) == 0x01 && Evo() && pokedex["Raichu"] > prev(pokedex["Raichu"]))
     
-achievement ("Venonat", "Obtain Venonat", 1,
+achievement ("Venonat", "Obtain Venonat", 1, id = 165656, badge = "186491",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Venonat"] > prev(pokedex["Venonat"]) && Catch())
     
-achievement ("Venomoth", "Obtain Venomoth", 2,
+achievement ("Venomoth", "Obtain Venomoth", 2, id = 165657, badge = "186492",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               (always_false() || 
               prev(pokedex["Venonat"]) == 0x01 && Evo() && pokedex["Venomoth"] > prev(pokedex["Venomoth"]) ||
               pokedex["Venomoth"] > prev(pokedex["Venomoth"]) && Catch()))
               
-achievement ("Psyduck", "Obtain Psyduck", 1,
+achievement ("Psyduck", "Obtain Psyduck", 1, id = 165658, badge = "186493",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Psyduck"] > prev(pokedex["Psyduck"]) && Catch())
     
-achievement ("Golduck", "Obtain Golduck", 2,
+achievement ("Golduck", "Obtain Golduck", 2, id = 165659, badge = "186494",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && prev(pokedex["Psyduck"]) == 0x01 && Evo() && pokedex["Golduck"] > prev(pokedex["Golduck"]))
     
-achievement ("Poliwag", "Obtain Poliwag", 1,
+achievement ("Poliwag", "Obtain Poliwag", 1, id = 165660, badge = "186495",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Poliwag"] > prev(pokedex["Poliwag"]) && Catch())
     
-achievement ("Poliwhirl", "Obtain Poliwhirl", 2,
+achievement ("Poliwhirl", "Obtain Poliwhirl", 2, id = 165661, badge = "186496",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               (always_false() || 
               prev(pokedex["Poliwag"]) == 0x01 && Evo() && pokedex["Poliwhirl"] > prev(pokedex["Poliwhirl"]) ||
               pokedex["Poliwhirl"] > prev(pokedex["Poliwhirl"]) && Catch()))
               
-achievement ("Poliwrath", "Obtain Poliwrath", 3,
+achievement ("Poliwrath", "Obtain Poliwrath", 3, id = 165662, badge = "186497",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Poliwhirl"]) == 0x01 && Evo() && pokedex["Poliwrath"] > prev(pokedex["Poliwrath"]))
               
-achievement ("Machop", "Obtain Machop", 1,
+achievement ("Machop", "Obtain Machop", 1, id = 165663, badge = "186498",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Machop"] > prev(pokedex["Machop"]) && Catch())             
               
-achievement ("Machoke", "Obtain Machoke", 2,
+achievement ("Machoke", "Obtain Machoke", 2, id = 165664, badge = "186499",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Machop"]) == 0x01 && Evo() && pokedex["Machoke"] > prev(pokedex["Machoke"]))
               
-achievement ("Tentacool", "Obtain Tentacool", 1,
+achievement ("Tentacool", "Obtain Tentacool", 1, id = 165665, badge = "186500",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Tentacool"] > prev(pokedex["Tentacool"]) && Catch())             
               
-achievement ("Tentacruel", "Obtain Tentacruel", 2,
+achievement ("Tentacruel", "Obtain Tentacruel", 2, id = 165666, badge = "186501",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Tentacool"]) == 0x01 && Evo() && pokedex["Tentacruel"] > prev(pokedex["Tentacruel"]))
               
-achievement ("Slowpoke", "Obtain Slowpoke", 1,
+achievement ("Slowpoke", "Obtain Slowpoke", 1, id = 165667, badge = "186502",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Slowpoke"] > prev(pokedex["Slowpoke"]) && Catch())             
               
-achievement ("Slowbro", "Obtain Slowbro", 2,
-    trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
-              prev(pokedex["Slowpoke"]) == 0x01 && Evo() && pokedex["Slowbro"] > prev(pokedex["Slowbro"]))
+achievement ("Slowbro", "Obtain Slowbro", 2, id = 165668, badge = "186503",
+    trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && prev(pokedex["Slowpoke"]) == 0x01 && 
+             (always_false() || 
+              Evo() && prev(pokedex["Slowpoke"]) == 0x01 && pokedex["Slowbro"] > prev(pokedex["Slowbro"]) ||
+              prev(pokedex["Slowpoke"]) == 0x01 && prior(LearnEvo()) == 0x00 && pokedex["Slowbro"] > prev(pokedex["Slowbro"])))
               
-achievement ("Doduo", "Obtain Doduo", 1,
+achievement ("Doduo", "Obtain Doduo", 1, id = 165669, badge = "186504",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Doduo"] > prev(pokedex["Doduo"]) && Catch())             
               
-achievement ("Dodrio", "Obtain Dodrio", 2,
+achievement ("Dodrio", "Obtain Dodrio", 2, id = 165670, badge = "186505",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Doduo"]) == 0x01 && Evo() && pokedex["Dodrio"] > prev(pokedex["Dodrio"]))
               
-achievement ("Shellder", "Obtain Shellder", 1,
+achievement ("Shellder", "Obtain Shellder", 1, id = 165671, badge = "186506",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Shellder"] > prev(pokedex["Shellder"]) && Catch())             
               
-achievement ("Cloyster", "Obtain Cloyster", 2,
+achievement ("Cloyster", "Obtain Cloyster", 2, id = 165672, badge = "186507",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Shellder"]) == 0x01 && Evo() && pokedex["Cloyster"] > prev(pokedex["Cloyster"]))
               
-achievement ("Gastly", "Obtain Gastly", 1,
+achievement ("Gastly", "Obtain Gastly", 1, id = 165673, badge = "186508",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Gastly"] > prev(pokedex["Gastly"]) && Catch()) 
     
-achievement ("Haunter", "Obtain Haunter", 2,
+achievement ("Haunter", "Obtain Haunter", 2, id = 165674, badge = "186509",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               (always_false() || 
               prev(pokedex["Gastly"]) == 0x01 && Evo() && pokedex["Haunter"] > prev(pokedex["Haunter"]) ||
               pokedex["Haunter"] > prev(pokedex["Haunter"]) && Catch()))
               
-achievement ("Onix", "Obtain Onix", 1,
+achievement ("Onix", "Obtain Onix", 1, id = 165675, badge = "186510",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Onix"] > prev(pokedex["Onix"]) && Catch()) 
     
-achievement ("Krabby", "Obtain Krabby", 1,
+achievement ("Krabby", "Obtain Krabby", 1, id = 165676, badge = "186511",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Krabby"] > prev(pokedex["Krabby"]) && Catch())             
               
-achievement ("Kingler", "Obtain Kingler", 2,
+achievement ("Kingler", "Obtain Kingler", 2, id = 165677, badge = "186512",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Krabby"]) == 0x01 && Evo() && pokedex["Kingler"] > prev(pokedex["Kingler"]))
               
-achievement ("Voltorb", "Obtain Voltorb", 1,
+achievement ("Voltorb", "Obtain Voltorb", 1, id = 165678, badge = "186513",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Voltorb"] > prev(pokedex["Voltorb"]) && Catch())             
               
-achievement ("Electrode", "Obtain Electrode", 2,
+achievement ("Electrode", "Obtain Electrode", 2, id = 165679, badge = "186514",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Voltorb"]) == 0x01 && Evo() && pokedex["Electrode"] > prev(pokedex["Electrode"]))
               
-achievement ("Exeggcute", "Obtain Exeggcute", 1,
+achievement ("Exeggcute", "Obtain Exeggcute", 1, id = 165680, badge = "186515",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Exeggcute"] > prev(pokedex["Exeggcute"]) && Catch())             
               
-achievement ("Exeggutor", "Obtain Exeggutor", 2,
+achievement ("Exeggutor", "Obtain Exeggutor", 2, id = 165681, badge = "186516",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Exeggcute"]) == 0x01 && Evo() && pokedex["Exeggutor"] > prev(pokedex["Exeggutor"]))
               
-achievement ("Cubone", "Obtain Cubone", 1,
+achievement ("Cubone", "Obtain Cubone", 1, id = 165682, badge = "186517",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Cubone"] > prev(pokedex["Cubone"]) && Catch())             
               
-achievement ("Marowak", "Obtain Marowak", 2,
+achievement ("Marowak", "Obtain Marowak", 2, id = 165683, badge = "186518",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Cubone"]) == 0x01 && Evo() && pokedex["Marowak"] > prev(pokedex["Marowak"]))
               
-achievement ("Lickitung", "Obtain Lickitung", 1,
+achievement ("Lickitung", "Obtain Lickitung", 1, id = 165684, badge = "186519",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && Map() == Lick && Lick() > prev(Lick()))
     
-achievement ("Rhyhorn", "Obtain Rhyhorn", 1,
+achievement ("Rhyhorn", "Obtain Rhyhorn", 1, id = 165685, badge = "186520",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Rhyhorn"] > prev(pokedex["Rhyhorn"]) && Catch())             
               
-achievement ("Rhydon", "Obtain Rhydon", 2,
+achievement ("Rhydon", "Obtain Rhydon", 2, id = 165686, badge = "186521",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Rhyhorn"]) == 0x01 && Evo() && pokedex["Rhydon"] > prev(pokedex["Rhydon"]))
               
-achievement ("Chansey", "Obtain Chansey", 5,
+achievement ("Chansey", "Obtain Chansey", 5, id = 165687, badge = "186522",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Chansey"] > prev(pokedex["Chansey"]) && Catch())
     
-achievement ("Kangaskhan", "Obtain Kangaskhan", 3,
+achievement ("Kangaskhan", "Obtain Kangaskhan", 3, id = 165688, badge = "186523",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Kangaskhan"] > prev(pokedex["Kangaskhan"]) && Catch())  
     
-achievement ("Tauros", "Obtain Tauros", 2,
+achievement ("Tauros", "Obtain Tauros", 2, id = 165689, badge = "186524",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Tauros"] > prev(pokedex["Tauros"]) && Catch())  
     
-achievement ("Horsea", "Obtain Horsea", 1,
+achievement ("Horsea", "Obtain Horsea", 1, id = 165690, badge = "186525",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Horsea"] > prev(pokedex["Horsea"]) && Catch())             
               
-achievement ("Seadra", "Obtain Seadra", 2,
+achievement ("Seadra", "Obtain Seadra", 2, id = 165691, badge = "186526",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Horsea"]) == 0x01 && Evo() && pokedex["Seadra"] > prev(pokedex["Seadra"]))
               
-achievement ("Goldeen", "Obtain Goldeen", 1,
+achievement ("Goldeen", "Obtain Goldeen", 1, id = 165692, badge = "186527",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Goldeen"] > prev(pokedex["Goldeen"]) && Catch()) 
     
-achievement ("Seaking", "Obtain Seaking", 2,
+achievement ("Seaking", "Obtain Seaking", 2, id = 165693, badge = "186528",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               (always_false() || 
               prev(pokedex["Goldeen"]) == 0x01 && Evo() && pokedex["Seaking"] > prev(pokedex["Seaking"]) ||
               pokedex["Seaking"] > prev(pokedex["Seaking"]) && Catch()))
               
-achievement ("Staryu", "Obtain Staryu", 1,
+achievement ("Staryu", "Obtain Staryu", 1, id = 165694, badge = "186529",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Staryu"] > prev(pokedex["Staryu"]) && Catch())             
               
-achievement ("Starmie", "Obtain Starmie", 2,
+achievement ("Starmie", "Obtain Starmie", 2, id = 165695, badge = "186530",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Staryu"]) == 0x01 && Evo() && pokedex["Starmie"] > prev(pokedex["Starmie"]))
               
-achievement ("Jynx", "Obtain Jynx", 1,
+achievement ("Jynx", "Obtain Jynx", 1, id = 165696, badge = "186531",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && Map() == Jynx && Jynx() > prev(Jynx()))
     
-achievement ("Lapras", "Obtain Lapras", 1,
-    trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && Map() == Mime && Lapras() > prev(Lapras()))
+achievement ("Lapras", "Obtain Lapras", 1, id = 165697, badge = "186532",
+    trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && Map() == Lapras && Lapras() > prev(Lapras()))
     
-achievement ("Ditto", "Obtain Ditto", 1,
+achievement ("Ditto", "Obtain Ditto", 1, id = 165698, badge = "186533",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Ditto"] > prev(pokedex["Ditto"]) && Catch()) 
     
-achievement ("Eevee", "Obtain Eevee", 1,
+achievement ("Eevee", "Obtain Eevee", 1, id = 165699, badge = "186534",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && Map() == Eevee && Eevee() > prev(Eevee()))
     
-achievement ("Porygon", "Obtain Porygon", 1,
+achievement ("Porygon", "Obtain Porygon", 1, id = 165700, badge = "186535",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && Map() == Casino && pokedex["Porygon"] > prev(pokedex["Porygon"])) 
   
-achievement ("Snorlax", "Obtain Snorlax", 1,
+achievement ("Snorlax", "Obtain Snorlax", 1, id = 165701, badge = "186536",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Snorlax"] > prev(pokedex["Snorlax"]) && Catch()) 
     
-achievement ("Dratini", "Obtain Dratini", 1,
+achievement ("Dratini", "Obtain Dratini", 1, id = 165702, badge = "186537",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               (always_false() || 
               pokedex["Dratini"] > prev(pokedex["Dratini"]) && Catch() ||
               Map() == Casino && pokedex["Dratini"] > prev(pokedex["Dratini"])))
     
-achievement ("Dragonair", "Obtain Dragonair", 2,
+achievement ("Dragonair", "Obtain Dragonair", 2, id = 165703, badge = "186538",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Dratini"]) == 0x01 && Evo() && pokedex["Dragonair"] > prev(pokedex["Dragonair"]))
               
-achievement ("Dragonite", "Obtain Dragonite", 3,
+achievement ("Dragonite", "Obtain Dragonite", 3, id = 165704, badge = "186539",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Dragonair"]) == 0x01 && Evo() && pokedex["Dragonite"] > prev(pokedex["Dragonite"]))
               
-achievement ("Vileplume", "Obtain Vileplume", 3,
+achievement ("Vileplume", "Obtain Vileplume", 3, id = 165705, badge = "186540",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Gloom"]) == 0x01 && Evo() && pokedex["Vileplume"] > prev(pokedex["Vileplume"]))  
               
-achievement ("Growlithe", "Obtain Growlithe", 1,
+achievement ("Growlithe", "Obtain Growlithe", 1, id = 165706, badge = "186541",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Growlithe"] > prev(pokedex["Growlithe"]) && Catch()) 
     
-achievement ("Arcanine", "Obtain Arcanine", 2,
+achievement ("Arcanine", "Obtain Arcanine", 2, id = 165707, badge = "186542",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               prev(pokedex["Growlithe"]) == 0x01 && Evo() && pokedex["Arcanine"] > prev(pokedex["Arcanine"]))
               
-achievement ("Scyther", "Obtain Scyther", 2,
+achievement ("Scyther", "Obtain Scyther", 2, id = 165708, badge = "186543",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               always_false() || 
               pokedex["Scyther"] > prev(pokedex["Scyther"]) && Catch() ||
               Map() == Casino && pokedex["Scyther"] > prev(pokedex["Scyther"])) 
     
-achievement ("Eeveelution", "Choose your Eeveelution", 2,
+achievement ("Eeveelution", "Choose your Eeveelution", 2, id = 165709, badge = "186544",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && prev(pokedex["Eevee"]) == 0x01 &&
-              always_false() || 
+              (always_false() || 
               Evo() && pokedex["Jolteon"] > prev(pokedex["Jolteon"]) ||
               Evo() && pokedex["Vaporeon"] > prev(pokedex["Vaporeon"]) ||
-              Evo() && pokedex["Flareon"] > prev(pokedex["Flareon"]))
+              Evo() && pokedex["Flareon"] > prev(pokedex["Flareon"])))
               
-achievement ("Moonstone III", "Obtain one of the following Nidoking/Nidoqueen/Clefable/Wigglytuff", 3,
+achievement ("Moonstone III", "Obtain one of the following Nidoking, Nidoqueen, Clefable or Wigglytuff", 3, id = 165710, badge = "186545",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && prev(pokedex["Nidoking"]+pokedex["Nidoqueen"]+pokedex["Clefable"]+pokedex["Wigglytuff"]) == 0x02 && 
               (always_false() || 
               prev(pokedex["Nidorino"]) == 0x01 && Evo() && pokedex["Nidoking"] > prev(pokedex["Nidoking"]) ||
@@ -664,7 +670,7 @@ achievement ("Moonstone III", "Obtain one of the following Nidoking/Nidoqueen/Cl
               prev(pokedex["Clefairy"]) == 0x01 && Evo() && pokedex["Clefable"] > prev(pokedex["Clefable"]) ||
               prev(pokedex["Jigglypuff"]) == 0x01 && Evo() && pokedex["Wigglytuff"] > prev(pokedex["Wigglytuff"])))
               
-achievement ("Moonstone IV", "Obtain one of the following Nidoking/Nidoqueen/Clefable/Wigglytuff", 3,
+achievement ("Moonstone IV", "Obtain one of the following Nidoking, Nidoqueen, Clefable or Wigglytuff", 3, id = 165711, badge = "186546",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 &&  prev(pokedex["Nidoking"]+pokedex["Nidoqueen"]+pokedex["Clefable"]+pokedex["Wigglytuff"]) == 0x03 && 
               (always_false() || 
               prev(pokedex["Nidorino"]) == 0x01 && Evo() && pokedex["Nidoking"] > prev(pokedex["Nidoking"]) ||
@@ -672,117 +678,121 @@ achievement ("Moonstone IV", "Obtain one of the following Nidoking/Nidoqueen/Cle
               prev(pokedex["Clefairy"]) == 0x01 && Evo() && pokedex["Clefable"] > prev(pokedex["Clefable"]) ||
               prev(pokedex["Jigglypuff"]) == 0x01 && Evo() && pokedex["Wigglytuff"] > prev(pokedex["Wigglytuff"])))
               
-achievement ("Choose Your Fighter", "Obtain Hitmonlee or Hitmonchan", 1,
+achievement ("Choose Your Fighter", "Obtain Hitmonlee or Hitmonchan", 1, id = 165712, badge = "186547",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && 
               always_false() ||
               Hitmonchan() > prev(Hitmonchan()) ||
               Hitmonlee() > prev(Hitmonlee()))
               
-achievement ("Badge III", "Obtain the Soul Badge from Koga with all 105 possible Pokemon obtained", 10,
+achievement ("Badge III", "Obtain the Soul Badge from Koga with all 105 possible Pokemon obtained", 10, id = 165713, badge = "186548",
     trigger = (Map() == Koga) && trigger_when(Badges() > prev(Badges())) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1() == 0x66 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
-achievement ("Ponyta", "Obtain Ponyta", 1,
+achievement ("Ponyta", "Obtain Ponyta", 1, id = 165714, badge = "186549",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && pokedex["Ponyta"] > prev(pokedex["Ponyta"]) && Catch()) 
     
-achievement ("Rapidash", "Obtain Rapidash", 2,
+achievement ("Rapidash", "Obtain Rapidash", 2, id = 165715, badge = "186550",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03  && 
               prev(pokedex["Ponyta"]) == 0x01 && Evo() && pokedex["Rapidash"] > prev(pokedex["Rapidash"]))
               
-achievement ("Magnemite", "Obtain Magnemite", 1,
+achievement ("Magnemite", "Obtain Magnemite", 1, id = 165716, badge = "186551",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && pokedex["Magnemite"] > prev(pokedex["Magnemite"]) && Catch()) 
     
-achievement ("Magneton", "Obtain Magneton", 2,
+achievement ("Magneton", "Obtain Magneton", 2, id = 165717, badge = "186552",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03  && 
               (always_false() ||
               prev(pokedex["Magnemite"]) == 0x01 && Evo() && pokedex["Magneton"] > prev(pokedex["Magneton"]) ||
               pokedex["Magneton"] > prev(pokedex["Magneton"]) && Catch()))
               
-achievement ("Seel", "Obtain Seel", 1,
+achievement ("Seel", "Obtain Seel", 1, id = 165718, badge = "186553",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && pokedex["Seel"] > prev(pokedex["Seel"]) && Catch()) 
     
-achievement ("Dewgong", "Obtain Dewgong", 2,
+achievement ("Dewgong", "Obtain Dewgong", 2, id = 165719, badge = "186554",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03  && 
               (always_false() ||
               prev(pokedex["Seel"]) == 0x01 && Evo() && pokedex["Dewgong"] > prev(pokedex["Dewgong"]) ||
               pokedex["Dewgong"] > prev(pokedex["Dewgong"]) && Catch()))
               
-achievement ("Grimer", "Obtain Grimer", 1,
+achievement ("Grimer", "Obtain Grimer", 1, id = 165720, badge = "186555",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && pokedex["Grimer"] > prev(pokedex["Grimer"]) && Catch()) 
     
-achievement ("Muk", "Obtain Muk", 2,
+achievement ("Muk", "Obtain Muk", 2, id = 165721, badge = "186556",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03  && 
               (always_false() ||
               prev(pokedex["Grimer"]) == 0x01 && Evo() && pokedex["Muk"] > prev(pokedex["Muk"]) ||
               pokedex["Muk"] > prev(pokedex["Muk"]) && Catch()))
               
-achievement ("Koffing", "Obtain Koffing", 1,
+achievement ("Koffing", "Obtain Koffing", 1, id = 165722, badge = "186557",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && pokedex["Koffing"] > prev(pokedex["Koffing"]) && Catch()) 
     
-achievement ("Weezing", "Obtain Weezing", 2,
+achievement ("Weezing", "Obtain Weezing", 2, id = 165723, badge = "186558",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03  && 
               (always_false() ||
               prev(pokedex["Koffing"]) == 0x01 && Evo() && pokedex["Weezing"] > prev(pokedex["Weezing"]) ||
               pokedex["Weezing"] > prev(pokedex["Weezing"]) && Catch()))
               
-achievement ("Tangela", "Obtain Tangela", 1,
-    trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && pokedex["Tangela"] > prev(pokedex["Tangela"]) && Catch()) 
+achievement ("Tangela", "Obtain Tangela", 1, id = 165724, badge = "186559",
+    trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && 
+             (always_false() || 
+              pokedex["Tangela"] > prev(pokedex["Tangela"]) && Catch() || 
+              Tangela() > prev(Tangela()) && Map() == Tangela ()))
     
-achievement ("Zapdos", "Obtain Zapdos", 5,
+achievement ("Zapdos", "Obtain Zapdos", 5, id = 165725, badge = "186560",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && pokedex["Zapdos"] > prev(pokedex["Zapdos"]) && Catch())
     
-achievement ("Electabuzz", "Obtain Electabuzz", 3,
+achievement ("Electabuzz", "Obtain Electabuzz", 3, id = 165726, badge = "186561",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && pokedex["Electabuzz"] > prev(pokedex["Electabuzz"]) && Catch())
     
-achievement ("Aerodactyl", "Obtain Aerodactyl", 1,
+achievement ("Aerodactyl", "Obtain Aerodactyl", 1, id = 165727, badge = "186562",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && pokedex["Aerodactyl"] > prev(pokedex["Aerodactyl"]) && Map() == Fossil)
     
-achievement ("Fossil I", "Obtain Omanyte or Kabuto", 1,
+achievement ("Fossil I", "Obtain Omanyte or Kabuto", 1, id = 165728, badge = "186563",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 && Map() == Fossil && 
-              always_false() ||
+              (always_false() ||
               pokedex["Omanyte"] > prev(pokedex["Omanyte"]) ||
-              pokedex["Kabuto"] > prev(pokedex["Kabuto"]))
+              pokedex["Kabuto"] > prev(pokedex["Kabuto"])))
               
-achievement ("Fossil II", "Obtain Omanyte or Kabuto", 2,
+achievement ("Fossil II", "Obtain Omastar or Kabutops", 2, id = 165729, badge = "186564",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"] == 0x03 &&
               always_false() ||
               prev(pokedex["Omanyte"]) == 0x01 && Evo() && pokedex["Omastar"] > prev(pokedex["Omastar"]) ||
               prev(pokedex["Kabuto"]) == 0x01 && Evo() && pokedex["Kabutops"] > prev(pokedex["Kabutops"]))
               
-achievement ("Badge IV", "Obtain the Rainbow Badge from Erika with all 121 possible Pokemon obtained", 10,
+achievement ("Badge IV", "Obtain the Rainbow Badge from Erika with all 121 possible Pokemon obtained", 10, id = 165730, badge = "186565",
     trigger = (Map() == Erica) && trigger_when(Badges() > prev(Badges())) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth() == 0x76 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
-achievement ("Articuno", "Obtain Articuno", 5,
+achievement ("Articuno", "Obtain Articuno", 5, id = 165731, badge = "186566",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"]+Badges["Erika"] == 0x04 && pokedex["Articuno"] > prev(pokedex["Articuno"]) && Catch())
     
-achievement ("Badge V", "Obtain the Thunder Badge from Lt.Surge with all 122 possible Pokemon obtained", 10,
+achievement ("Badge V", "Obtain the Thunder Badge from Lt.Surge with all 122 possible Pokemon obtained", 10, id = 165732, badge = "186567",
     trigger = (Map() == Surge) && prev(Badges()) == 0x1b && trigger_when(Badges() == 0x1f) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
-achievement ("Badge VI", "Obtain the Marsh  Badge from Sabrina with all 122 possible Pokemon obtained", 10,
+achievement ("Badge VI", "Obtain the Marsh  Badge from Sabrina with all 122 possible Pokemon obtained", 10, id = 165733, badge = "186568",
     trigger = (Map() == Sabrina) && prev(Badges()) == 0x1f && trigger_when(Badges() == 0x3f) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
-achievement ("Badge VII", "Obtain the Volcano Badge from Blaine with all 122 possible Pokemon obtained", 10,
+achievement ("Badge VII", "Obtain the Volcano Badge from Blaine with all 122 possible Pokemon obtained", 10, id = 165734, badge = "186569",
     trigger = (Map() == Blaine) && prev(Badges()) == 0x3f && trigger_when(Badges() == 0x7f) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
-achievement ("Badge VIII", "Obtain the Earth Badge from Giovanni with all 122 possible Pokemon obtained", 10,
+achievement ("Badge VIII", "Obtain the Earth Badge from Giovanni with all 122 possible Pokemon obtained", 10, id = 165735, badge = "186570",
     trigger = (Map() == Giovanni) && prev(Badges()) == 0x7f && trigger_when(Badges() == 0xff) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
-achievement ("Moltres", "Obtain Moltres", 5,
+achievement ("Moltres", "Obtain Moltres", 5, id = 165736, badge = "186571",
     trigger = Badges() == 0xff && pokedex["Moltres"] > prev(pokedex["Moltres"]) && Catch())
     
-achievement ("Champ", "Defeat the Elite 4 with all 123 possible Pokemon obtained", 10,
+achievement ("Champ", "Defeat the Elite 4 with all 123 possible Pokemon obtained", 10, id = 165737, badge = "186572",
     trigger = Badges() == 0xff && trigger_when(Map() == Champ) && prev(Map()) == Rival && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"]+pokedex["Moltres"] == 0x78)
     
-achievement ("Was It Worth It?", "Obtain Mewtwo with all 123 possible Pokemon Obtained", 5,
-    trigger = Badges() == 0xff && Map() == Mewtwo && pokedex["Mewtwo"] > prev(pokedex["Mewtwo"]) && Catch && prev(First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"]+pokedex["Moltres"]) == 0x78())
+achievement ("Was It Worth It?", "Obtain Mewtwo with all 123 possible Pokemon Obtained", 5, id = 165738, badge = "186573",
+    trigger = Badges() == 0xff && Map() == Mewtwo && pokedex["Mewtwo"] > prev(pokedex["Mewtwo"]) && Catch() && prev(First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"]+
+                                                     pokedex["Moltres"]) == 0x78)
