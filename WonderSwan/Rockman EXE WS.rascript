@@ -18,7 +18,7 @@ flameman_stage1 = 0x0a
 electman_stage2 = 0x07
 colorman_stage2 = 0x0b
 pharaohman_stage3 = 0x0d
-magicman_stage3 = 0x06
+magicman_stage3 = 0x05
 bombman_stage4 = 0x07
 snakeman_stage4 = 0x0c
 firemanv2_stage5 = 0x07
@@ -35,6 +35,7 @@ Hard = 0x02
 ExHard = 0x03
 function state() => byte(0x11a8)
 playing = 0x06
+menus = 0x0b
 function chip1() => byte(0xbff)
 sword = 0x28
 function chip2() => byte(0xc00)
@@ -255,7 +256,7 @@ achievement ("Magic Missile [m]", "Defeat MagicMan buster only no chips or style
               stylepause() &&
               normalbossdeath() &&
               chipless() &&
-              magicmanstage3reset())  
+              coordreset())  
               
 achievement ("ProtoMan Challenge: MagicMan", "Defeat MagicMan with only the sword chip equipped and normal style (have it readied when entering the boss room)", 5, id = 155354, badge = "174951",
     trigger = level() == level3 &&
@@ -263,14 +264,14 @@ achievement ("ProtoMan Challenge: MagicMan", "Defeat MagicMan with only the swor
               stylepause() &&
               normalbossdeath() &&
               megaprotochallenge() &&
-              magicmanstage3reset())              
+              coordreset())              
               
 achievement ("Magical Barrier [m]", "Defeat MagicMan without taking damage", 10, id = 155355, badge = "174952",
     trigger = level() == level3 &&
               screen() == magicman_stage3 &&
               normalbossdeath() &&
               damageless() && 
-              magicmanstage3reset())                
+              coordreset())                
               
 achievement ("Mummified", "Defeat PharohMan", 5, id = 155356, badge = "174953",
     trigger = level() == level3 && 
@@ -563,7 +564,7 @@ achievement ("Best in the World [m]", "Defeat Gospel without taking damage", 25,
               gospelstage6reset()) 
               
 achievement ("Weapon Salesman", "Have at least one of every chip in the game in your inventory", 10, id = 155399, badge = "174996",
-    trigger = state() == playing &&
+    trigger = state() != menus &&
               level() < 0x07 &&
               allchipsinventory() &&
               allchips())
@@ -573,18 +574,12 @@ achievement ("There Can Only Be One", "Defeat Gospel in BossRush on Easy or High
 
 achievement ("One With the Bullet", "Defeat Gospel in BossRush on Easy or Higher buster only no chips or styles equipped", 5, id = 155401, badge = "174998",
     trigger = bossrushbeateasy() && chiplessbossrush() && healthreset()) 
-    
-achievement ("ProtoMan Challenge: BossRush Easy", "Defeat Gospel in BossRush on Easy or Higher with only sword chip equipped and normal style", 5, id = 155402, badge = "174999",
-    trigger = bossrushbeateasy() && protomodebossrushpause1() && protomodebossrushpause2() && healthreset())
               
 achievement ("One Vs All", "Defeat Gospel in BossRush on Med or Higher", 5, id = 155403, badge = "175000",
     trigger = bossrushbeatmed())
 
 achievement ("My Mega Buster Can Cut the Mustard", "Defeat Gospel in BossRush on Med or Higher buster only no chips or styles equipped", 5, id = 155404, badge = "175001",
     trigger = bossrushbeatmed() && chiplessbossrush() && healthreset())
-    
-achievement ("ProtoMan Challenge: BossRush Medium", "Defeat Gospel in BossRush on Med with only sword chip equipped and normal style", 5, id = 155405, badge = "175002",
-    trigger = bossrushbeatmed() && protomodebossrushpause1() && protomodebossrushpause2() && healthreset())
     
 achievement ("Conquerer", "Defeat Gospel in BossRush on Hard or Higher", 10, id = 155406, badge = "175003",
     trigger = bossrushbeathard())
