@@ -350,9 +350,8 @@ achievement ("Nidorino", "Obtain Nidorino", 2, id = 165626, badge = "186461",
     trigger = Badges() == 0x00 && prev(pokedex["NidoranM"]) == 0x01 && Evo() && pokedex["Nidorino"] > prev(pokedex["Nidorino"]))   
     
 achievement ("Badge I", "Obtain the Boulder Badge from Brock with all 21 possible Pokemon obtained", 10, id = 165627, badge = "186462",
-    trigger = Map() == Brock && trigger_when(Badges() > prev(Badges())) && First() == 0x12 &&
-              (always_false() ||
-              Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
+    trigger = trigger_when(Map() == Brock) && trigger_when(Badges() > prev(Badges())) && First() == 0x12 &&
+              Squirtle()+Bulbasaur()+Charmander() == 0x03)
               
 achievement ("Clefairy", "Obtain Clefairy", 1, id = 165628, badge = "186463",
     trigger = Badges() == 0x01 && pokedex["Clefairy"] > prev(pokedex["Clefairy"]) && Catch()) 
@@ -452,7 +451,7 @@ achievement ("Moonstone II", "Obtain one of the following Nidoking, Nidoqueen, C
               prev(pokedex["Jigglypuff"]) == 0x01 && Evo() && pokedex["Wigglytuff"] > prev(pokedex["Wigglytuff"])))
               
 achievement ("Badge II", "Obtain the Cascade Badge from Misty with all 47 possible Pokemon obtained", 10, id = 165654, badge = "186489",
-    trigger = (Map() == Misty) && trigger_when(Badges() > prev(Badges())) && First()+Second()+Red1() == 0x2a && pokedex["Nidoqueen"]+pokedex["Nidoking"]+pokedex["Clefable"]+pokedex["Wigglytuff"] == 0x02 &&
+    trigger = trigger_when((Map() == Misty)) && trigger_when(Badges() > prev(Badges())) && First()+Second()+Red1() == 0x2a && pokedex["Nidoqueen"]+pokedex["Nidoking"]+pokedex["Clefable"]+pokedex["Wigglytuff"] == 0x02 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
@@ -685,7 +684,7 @@ achievement ("Choose Your Fighter", "Obtain Hitmonlee or Hitmonchan", 1, id = 16
               Hitmonlee() > prev(Hitmonlee()))
               
 achievement ("Badge III", "Obtain the Soul Badge from Koga with all 105 possible Pokemon obtained", 10, id = 165713, badge = "186548",
-    trigger = (Map() == Koga) && trigger_when(Badges() > prev(Badges())) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1() == 0x66 &&
+    trigger = trigger_when((Map() == Koga)) && trigger_when(Badges() > prev(Badges())) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1() == 0x66 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
@@ -760,7 +759,7 @@ achievement ("Fossil II", "Obtain Omastar or Kabutops", 2, id = 165729, badge = 
               prev(pokedex["Kabuto"]) == 0x01 && Evo() && pokedex["Kabutops"] > prev(pokedex["Kabutops"]))
               
 achievement ("Badge IV", "Obtain the Rainbow Badge from Erika with all 121 possible Pokemon obtained", 10, id = 165730, badge = "186565",
-    trigger = (Map() == Erica) && trigger_when(Badges() > prev(Badges())) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth() == 0x76 &&
+    trigger = trigger_when((Map() == Erica)) && trigger_when(Badges() > prev(Badges())) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth() == 0x76 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
@@ -768,22 +767,22 @@ achievement ("Articuno", "Obtain Articuno", 5, id = 165731, badge = "186566",
     trigger = Badges["Brock"]+Badges["Misty"]+Badges["Koga"]+Badges["Erika"] == 0x04 && pokedex["Articuno"] > prev(pokedex["Articuno"]) && Catch())
     
 achievement ("Badge V", "Obtain the Thunder Badge from Lt.Surge with all 122 possible Pokemon obtained", 10, id = 165732, badge = "186567",
-    trigger = (Map() == Surge) && prev(Badges()) == 0x1b && trigger_when(Badges() == 0x1f) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
+    trigger = trigger_when((Map() == Surge)) && prev(Badges()) == 0x1b && trigger_when(Badges() == 0x1f) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
 achievement ("Badge VI", "Obtain the Marsh  Badge from Sabrina with all 122 possible Pokemon obtained", 10, id = 165733, badge = "186568",
-    trigger = (Map() == Sabrina) && prev(Badges()) == 0x1f && trigger_when(Badges() == 0x3f) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
+    trigger = trigger_when((Map() == Sabrina)) && prev(Badges()) == 0x1f && trigger_when(Badges() == 0x3f) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
 achievement ("Badge VII", "Obtain the Volcano Badge from Blaine with all 122 possible Pokemon obtained", 10, id = 165734, badge = "186569",
-    trigger = (Map() == Blaine) && prev(Badges()) == 0x3f && trigger_when(Badges() == 0x7f) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
+    trigger = trigger_when((Map() == Blaine)) && prev(Badges()) == 0x3f && trigger_when(Badges() == 0x7f) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
 achievement ("Badge VIII", "Obtain the Earth Badge from Giovanni with all 122 possible Pokemon obtained", 10, id = 165735, badge = "186570",
-    trigger = (Map() == Giovanni) && prev(Badges()) == 0x7f && trigger_when(Badges() == 0xff) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
+    trigger = trigger_when((Map() == Giovanni)) && prev(Badges()) == 0x7f && trigger_when(Badges() == 0xff) && First()+Second()+Third()+Red1()+Red2()+ChanLee()+eevee()+Moon1()+Fourth()+pokedex["Articuno"] == 0x77 &&
               (always_false() ||
               Squirtle() == 0x03 || Bulbasaur() == 0x03 || Charmander() == 0x03))
               
