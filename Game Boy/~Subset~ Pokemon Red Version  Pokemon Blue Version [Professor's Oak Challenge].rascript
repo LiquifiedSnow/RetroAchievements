@@ -505,9 +505,7 @@ achievement ("Slowpoke", "Obtain Slowpoke", 1, id = 165667, badge = "186502",
               
 achievement ("Slowbro", "Obtain Slowbro", 2, id = 165668, badge = "186503",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && prev(pokedex["Slowpoke"]) == 0x01 && 
-             (always_false() || 
-              Evo() && prev(pokedex["Slowpoke"]) == 0x01 && pokedex["Slowbro"] > prev(pokedex["Slowbro"]) ||
-              prev(pokedex["Slowpoke"]) == 0x01 && prior(LearnEvo()) == 0x00 && pokedex["Slowbro"] > prev(pokedex["Slowbro"])))
+              pokedex["Slowbro"] > prev(pokedex["Slowbro"]))
               
 achievement ("Doduo", "Obtain Doduo", 1, id = 165669, badge = "186504",
     trigger = Badges["Brock"]+Badges["Misty"] == 0x02 && pokedex["Doduo"] > prev(pokedex["Doduo"]) && Catch())             
