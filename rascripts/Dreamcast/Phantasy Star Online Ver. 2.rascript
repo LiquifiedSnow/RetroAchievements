@@ -1,0 +1,255 @@
+Mission Log
+
+Missions ID's
+--------------
+0x0670 - Plains Overlord C
+0x0671 - Plains Overlord B
+0x0672 - Plains Overlord A
+0x0673 - Plains Overlord S
+
+0x08c0 - Train Rescue C
+0x08c1 - Train Rescue B
+0x08c2 - Train Rescue A
+0x08c3 - Train Rescue S
+
+0x0960 - Eco Protection C
+0x0961 - Eco Protection B
+0x0962 - Eco Protection A
+0x0963 - Eco Protection S
+
+0x0010 - Plant Recovery C
+0x0011 - Plant Recovery B
+0x0012 - Plant Recovery A
+0x0013 - Plant Recovery S
+
+0x00a0 - Dark Satellite - C
+0x00a1 - Dark Satellite - B
+0x00a2 - Dark Satellite - A
+0x00a3 - Dark Satellite - S
+
+0x00c0 - True Darkness - C
+0x00c1 - True Darkness - B
+0x00c2 - True Darkness - A
+0x00c3 - True Darkness - S
+
+0x12d0 - Desert Terror - C
+0x12d1 - Desert Terror - B
+0x12d2 - Desert Terror - A
+0x12d3 - Desert Terror - S
+
+0x14a0 - Caves of Ice - C
+0x14a1 - Caves of Ice - B
+0x14a2 - Caves of Ice - A
+0x14a3 - Caves of Ice - S
+
+0x0cc0 - Demons Above - C
+0x0cc1 - Demons Above - B
+0x0cc2 - Demons Above - A
+0x0cc3 - Demons Above - S
+
+0x0820 - Endrum Remnants - C
+0x0821 - Endrum Remnants - B
+0x0822 - Endrum Remnants - A
+0x0823 - Endrum Remnants - S
+
+0x0dc0 - Rainbow Beast - C
+0x0dc1 - Rainbow Beast - B
+0x0dc2 - Rainbow Beast - A
+0x0dc3 - Rainbow Beast - S
+
+0x0cb0 - Moonlight Beast - C
+0x0cb1 - Moonlight Beast - B
+0x0cb2 - Moonlight Beast - A
+0x0cb3 - Moonlight Beast - S
+
+0x0e60 - Grove of Fanatics - C
+0x0e61 - Grove of Fanatics - B
+0x0e62 - Grove of Fanatics - A
+0x0e63 - Grove of Fanatics - S
+
+0x0a00 - AMF HQ Recovery - C
+0x0a01 - AMF HQ Recovery - B
+0x0a02 - AMF HQ Recovery - A
+0x0a03 - AMF HQ Recovery - S
+
+0x06e0 - Sleeping Warriors - C
+0x06e1 - Sleeping Warriors - B
+0x06e2 - Sleeping Warriors - A
+0x06e3 - Sleeping Warriors - S
+
+0x06f0 - The Dual Sentinel - C
+0x06f1 - The Dual Sentinel - B
+0x06f2 - The Dual Sentinel - A
+0x06f3 - The Dual Sentinel - S
+
+0x0f00 - The Holy Grounds - C
+0x0f01 - The Holy Grounds - B
+0x0f02 - The Holy Grounds - A
+0x0f03 - The Holy Grounds - S
+
+0x10f0 - Hill of Spores - C
+0x10f1 - Hill of Spores - B
+0x10f2 - Hill of Spores - A
+0x10f3 - Hill of Spores - S
+
+0x1410 - Desert Goliath - C
+0x1411 - Desert Goliath - B
+0x1412 - Desert Goliath - A
+0x1413 - Desert Goliath - S
+
+0x1420 - Flaming Horns - C
+0x1421 - Flaming Horns - B
+0x1422 - Flaming Horns - A
+0x1423 - Flaming Horns - S
+
+0x0970 - Lightning Beasts - C
+0x0971 - Lightning Beasts - B
+0x0972 - Lightning Beasts - A
+0x0973 - Lightning Beasts - S
+
+0x10e0 - Dancing Birds - C
+0x10e1 - Dancing Birds - B
+0x10e2 - Dancing Birds - A
+0x10e3 - Dancing Birds - S
+
+0x12e0 - Stolen Weapons - C
+0x12e1 - Stolen Weapons - B
+0x12e2 - Stolen Weapons - A
+0x12e3 - Stolen Weapons - S
+
+0x0dd0 - The Eastern Peril - C
+0x0dd2 - The Eastern Peril - B
+0x0dd3 - The Eastern Peril - A
+0x0dd4 - The Eastern Peril - S
+
+0x00b0 - SEED Awakened - C
+0x00b1 - SEED Awakened - B
+0x00b2 - SEED Awakened - A
+0x00b3 - SEED Awakened - S
+
+0x0e70 - Claws & Bullets - C
+0x0e71 - Claws & Bullets - B
+0x0e72 - Claws & Bullets - A
+0x0e73 - Claws & Bullets - S
+
+0x14b0 - Awoken Serpent - C
+0x14b1 - Awoken Serpent - B
+0x14b2 - Awoken Serpent - A
+0x14b3 - Awoken Serpent - S
+
+
+
+
+
+
+
+
+
+0x1035378
+0x1035382
+0x103538C
+0x1035396
+0x10353A0
+0x10353AA
+0x10353B4
+0x10353BE
+0x10353C8
+0x10353D2
+0x10353DC
+0x10353E6
+0x10353F0
+0x10353FA
+0x1035404
+0x103540E
+0x1035418
+0x1035422
+0x103542C
+0x1035436
+0x1035440
+0x103544A
+0x1035454
+0x103545E
+0x1035468
+0x1035472
+0x103547C
+0x1035486
+0x1035490
+0x103549A
+0x10354A4
+0x10354AE
+0x10354B8
+0x10354C2
+0x10354CC
+0x10354D6
+0x10354E0
+0x10354EA
+0x10354F4
+0x10354FE
+0x1035508
+0x1035512
+0x103551C
+0x1035526
+0x1035530
+0x103553A
+0x1035544
+0x103554E
+0x1035558
+0x1035562
+0x103556C
+0x1035576
+0x1035580
+0x103558A
+0x1035594
+0x103559E
+0x10355A8
+0x10355B2
+0x10355BC
+0x10355C6
+0x10355D0
+0x10355DA
+0x10355E4
+0x10355EE
+0x10355F8
+0x1035602
+0x103560C
+0x1035616
+0x1035620
+0x103562A
+0x1035634
+0x103563E
+0x1035648
+0x1035652
+0x103565C
+0x1035666
+0x1035670
+0x103567A
+0x1035684
+0x103568E
+0x1035698
+0x10356A2
+0x10356AC
+0x10356B6
+0x10356C0
+0x10356CA
+0x10356D4
+0x10356DE
+0x10356E8
+0x10356F2
+0x10356FC
+0x1035706
+0x1035710
+0x103571A
+0x1035724
+0x103572E
+0x1035738
+0x1035742
+0x103574C
+0x1035756
+0x1035760
+0x103576A
+0x1035774
+0x103577E
+0x1035788
+0x1035792
+0x103579C
+0x10357A6

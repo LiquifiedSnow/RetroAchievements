@@ -245,10 +245,17 @@ achievement ("Forward, Forward", "Find the DashAttack chip in stage 2", 1, id = 
               screen() == 0x0e &&
               dashattack() > prev(dashattack()))
               
+              
+function got_your_nose() => once(level() == level3 && 
+                            screen() == magicman_stage3 && 
+                            prev(byte(0xbc8)) == 0x07 && 
+                            byte(0xbc8) == 8) &&
+                            normalbossdeath() &&
+                            never(lives() < prev(lives()))
+              
+              
 achievement ("Got Your Nose!", "Defeat MagicMan", 5, id = 155352, badge = "174949",
-    trigger = level() == level3 &&
-              screen() == magicman_stage3 &&
-              normalbossdeath())
+    trigger = got_your_nose())
               
 achievement ("Magic Missile [m]", "Defeat MagicMan buster only no chips or styles equipped", 10, id = 155353, badge = "174950",
     trigger = level() == level3 &&
@@ -405,7 +412,9 @@ achievement ("Firefighter [m]", "Defeat FireManV2 & obtain HeatGuts Style buster
               prev(heatguts()) == 0 &&
               heatguts() == 1 &&
               chipless() &&
-              livesreset())  
+              (always_false() ||
+              never(lives() < prev(lives())) && 
+              never(byte(0xbe6) == 0x00))) 
               
 achievement ("ProtoMan Challenge: FireManV2", "Defeat FireManV2 with only the sword chip equipped and normal style (have it readied when entering the boss room)", 5, id = 155376, badge = "174973",
     trigger = level() == level5 && 
