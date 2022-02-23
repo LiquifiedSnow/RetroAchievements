@@ -1065,659 +1065,659 @@ achievement ("World Challenger", "Defeat all of the Duelist's #18-83 at least on
 trigger = measured(duel_extras() == 66) && prev(duel_extras()) != 66)
 
 function ch_1() => byte(0xF7FF575C+dword(0xe7b054))/byte(0xF7FF575C)
-achievement ("Slugger", "Caused 10,000 or more points of battle damage during a duel", 5, 
+achievement ("Slugger", "[Story Mode] Caused 10,000 or more points of battle damage during a duel", 5, 
 trigger = save_protect_ch() && ch_1() == 1 && prev(ch_1()) == 0)
 
 function ch_2() => byte(0xF7FF575D+dword(0xe7b054))/byte(0xF7FF575D)
-achievement ("Rebounder", "Caused 4,000 or more points of deflected battle damage during a duel", 5, 
+achievement ("Rebounder", "[Story Mode] Caused 4,000 or more points of deflected battle damage during a duel", 5, 
 trigger = save_protect_ch() && ch_2() == 1 && prev(ch_2()) == 0)
 
 function ch_3() => byte(0xF7FF575E+dword(0xe7b054))/byte(0xF7FF575E)
-achievement ("Hard Hitting", "Caused 20,000 or more points of battle damage during a duel", 5, 
+achievement ("Hard Hitting", "[Story Mode] Caused 20,000 or more points of battle damage during a duel", 5, 
 trigger = save_protect_ch() && ch_3() == 1 && prev(ch_3()) == 0)
 
 function ch_4() => byte(0xF7FF575F+dword(0xe7b054))/byte(0xF7FF575F)
-achievement ("Heavy Hitter", "Caused 50,000 or more points of battle damage during a duel", 10, 
+achievement ("Heavy Hitter", "[Story Mode] Caused 50,000 or more points of battle damage during a duel", 10, 
 trigger = save_protect_ch() && ch_4() == 1 && prev(ch_4()) == 0)
 
 function ch_5() => byte(0xF7FF5760+dword(0xe7b054))/byte(0xF7FF5760)
-achievement ("Assassination", "Destroyed 20 of your opponent's monsters in battle during a duel", 5, 
+achievement ("Assassination", "[Story Mode] Destroyed 20 of your opponent's monsters in battle during a duel", 5, 
 trigger = save_protect_ch() && ch_5() == 1 && prev(ch_5()) == 0)
 
 function ch_6() => byte(0xF7FF5761+dword(0xe7b054))/byte(0xF7FF5761)
-achievement ("Destroyer", "Destroyed 30 of your opponent's monsters in battle during a duel", 5, 
+achievement ("Destroyer", "[Story Mode] Destroyed 30 of your opponent's monsters in battle during a duel", 5, 
 trigger = save_protect_ch() && ch_6() == 1 && prev(ch_6()) == 0)
 
 function ch_7() => byte(0xF7FF5762+dword(0xe7b054))/byte(0xF7FF5762)
-achievement ("Remover", "Removed 10 of your opponent's monsters from play using effects during a duel", 5, 
+achievement ("Remover", "[Story Mode] Removed 10 of your opponent's monsters from play using effects during a duel", 5, 
 trigger = save_protect_ch() && ch_7() == 1 && prev(ch_7()) == 0)
 
 function ch_8() => byte(0xF7FF5763+dword(0xe7b054))/byte(0xF7FF5763) 
-achievement ("Defensive ", "Destroyed 10 or more monsters in 1 duel with defensive victories", 5, 
+achievement ("Defensive ", "[Story Mode] Destroyed 10 or more monsters in 1 duel with defensive victories", 5, 
 trigger = save_protect_ch() && ch_8() == 1 && prev(ch_8()) == 0)
 
 function ch_9() => byte(0xF7FF5764+dword(0xe7b054))/byte(0xF7FF5764) 
-achievement ("Normalized", "Normal Summoned 10 monsters during a duel", 5, 
+achievement ("Normalized", "[Story Mode] Normal Summoned 10 monsters during a duel", 5, 
 trigger = save_protect_ch() && ch_9() == 1 && prev(ch_9()) == 0)
 
 function ch_10() => byte(0xF7FF5765+dword(0xe7b054))/byte(0xF7FF5765) 
-achievement ("Flippist", "Performed 10 Flip Summons during a duel", 5, 
+achievement ("Flippist", "[Story Mode] Performed 10 Flip Summons during a duel", 5, 
 trigger = save_protect_ch() && ch_10() == 1 && prev(ch_10()) == 0)
 
 function ch_11() => byte(0xF7FF5766+dword(0xe7b054))/byte(0xF7FF5766)
-achievement ("Fusionist", "Preformed 10 Fusion Summons during a duel", 5, 
+achievement ("Fusionist", "[Story Mode] Preformed 10 Fusion Summons during a duel", 5, 
 trigger = save_protect_ch() && ch_11() == 1 && prev(ch_11()) == 0)
 
 function ch_12() => byte(0xF7FF5767+dword(0xe7b054))/byte(0xF7FF5767)
-achievement ("Ritualist", "Preformed 10 Ritual Summons during a duel", 5, 
+achievement ("Ritualist", "[Story Mode] Preformed 10 Ritual Summons during a duel", 5, 
 trigger = save_protect_ch() && ch_12() == 1 && prev(ch_12()) == 0)
 
 function ch_13() => byte(0xF7FF5768+dword(0xe7b054))/byte(0xF7FF5768)
-achievement ("Specialist", "Used Special Summons to summon 20 or more monsters during a duel", 10, 
+achievement ("Specialist", "[Story Mode] Used Special Summons to summon 20 or more monsters during a duel", 10, 
 trigger = save_protect_ch() && ch_13() == 1 && prev(ch_13()) == 0)
 
 function ch_14() => byte(0xF7FF5769+dword(0xe7b054))/byte(0xF7FF5769)
-achievement ("Special Tokens", "Special Summoned 15 or more Tokens during a duel", 5, 
+achievement ("Special Tokens", "[Story Mode] Special Summoned 15 or more Tokens during a duel", 5, 
 trigger = save_protect_ch() && ch_14() == 1 && prev(ch_14()) == 0)
 
 function ch_15() => byte(0xF7FF576A+dword(0xe7b054))/byte(0xF7FF576A)
-achievement ("Multi Union", "Equipped 5 Union monsters during a duel", 10, 
+achievement ("Multi Union", "[Story Mode] Equipped 5 Union monsters during a duel", 10, 
 trigger = save_protect_ch() && ch_15() == 1 && prev(ch_15()) == 0)
 
 function ch_16() => byte(0xF7FF576B+dword(0xe7b054))/byte(0xF7FF576B)
-achievement ("Toon's Direct", "Caused 8,000 or points of direct damage with Toon monsters during a duel", 10, 
+achievement ("Toon's Direct", "[Story Mode] Caused 8,000 or points of direct damage with Toon monsters during a duel", 10, 
 trigger = save_protect_ch() && ch_16() == 1 && prev(ch_16()) == 0)
 
 function ch_17() => byte(0xF7FF576C+dword(0xe7b054))/byte(0xF7FF576C)
-achievement ("Spell Casting", "Used Spell Cards 20 times during a duel", 5, 
+achievement ("Spell Casting", "[Story Mode] Used Spell Cards 20 times during a duel", 5, 
 trigger = save_protect_ch() && ch_17() == 1 && prev(ch_17()) == 0)
 
 function ch_18() => byte(0xF7FF576D+dword(0xe7b054))/byte(0xF7FF576D)
-achievement ("Quick Spells", "Used Quick-Play Spell Cards 10 times in your opponent's turn during a duel", 5, 
+achievement ("Quick Spells", "[Story Mode] Used Quick-Play Spell Cards 10 times in your opponent's turn during a duel", 5, 
 trigger = save_protect_ch() && ch_18() == 1 && prev(ch_18()) == 0)
 
 function ch_19() => byte(0xF7FF576E+dword(0xe7b054))/byte(0xF7FF576E)
-achievement ("Trap Placements", "Activated 10 Trap Cards during a duel", 5, 
+achievement ("Trap Placements", "[Story Mode] Activated 10 Trap Cards during a duel", 5, 
 trigger = save_protect_ch() && ch_19() == 1 && prev(ch_19()) == 0)
 
 function ch_20() => byte(0xF7FF576F+dword(0xe7b054))/byte(0xF7FF576F)
-achievement ("Reversal", "Countered your opponent's Spells, Traps, effects, Attacks and Summons 10 times during a duel", 5, 
+achievement ("Reversal", "[Story Mode] Countered your opponent's Spells, Traps, effects, Attacks and Summons 10 times during a duel", 5, 
 trigger = save_protect_ch() && ch_20() == 1 && prev(ch_20()) == 0)
 
 function ch_21() => byte(0xF7FF5770+dword(0xe7b054))/byte(0xF7FF5770)
-achievement ("Change of Heart", "Took control of your opponent's monsters 10 times during a duel", 5, 
+achievement ("Change of Heart", "[Story Mode] Took control of your opponent's monsters 10 times during a duel", 5, 
 trigger = save_protect_ch() && ch_21() == 1 && prev(ch_21()) == 0)
 
 function ch_22() => byte(0xF7FF5771+dword(0xe7b054))/byte(0xF7FF5771)
-achievement ("Chain-Link", "Formed a chain of 5 or more chain links during a duel", 25, 
+achievement ("Chain-Link", "[Story Mode] Formed a chain of 5 or more chain links during a duel", 25, 
 trigger = save_protect_ch() && ch_22() == 1 && prev(ch_22()) == 0)
 
 function ch_23() => byte(0xF7FF5772+dword(0xe7b054))/byte(0xF7FF5772)
-achievement ("Spell Counter", "Used 10 or more Spell Counters during a duel", 5, 
+achievement ("Spell Counter", "[Story Mode] Used 10 or more Spell Counters during a duel", 5, 
 trigger = save_protect_ch() && ch_23() == 1 && prev(ch_23()) == 0)
 
 function ch_24() => byte(0xF7FF5773+dword(0xe7b054))/byte(0xF7FF5773)
-achievement ("Throw Away", "Made your opponent discard 20 or more cards from their hands", 5, 
+achievement ("Throw Away", "[Story Mode] Made your opponent discard 20 or more cards from their hands", 5, 
 trigger = save_protect_ch() && ch_24() == 1 && prev(ch_24()) == 0)
 
 function ch_25() => byte(0xF7FF5774+dword(0xe7b054))/byte(0xF7FF5774)
-achievement ("Healer", "Restored 20,000 or more Life Points during a duel", 10, 
+achievement ("Healer", "[Story Mode] Restored 20,000 or more Life Points during a duel", 10, 
 trigger = save_protect_ch() && ch_25() == 1 && prev(ch_25()) == 0)
 
 function ch_26() => byte(0xF7FF5775+dword(0xe7b054))/byte(0xF7FF5775)
-achievement ("Victory", "Won the Match", 5, 
+achievement ("Victory", "[Story Mode] Won the Match", 5, 
 trigger = save_protect_ch() && ch_26() == 1 && prev(ch_26()) == 0)
 
 function ch_27() => byte(0xF7FF5776+dword(0xe7b054))/byte(0xF7FF5776)
-achievement ("Draw", "Ended the duel in a draw", 5, 
+achievement ("Draw", "[Story Mode] Ended the duel in a draw", 5, 
 trigger = save_protect_ch() && ch_27() == 1 && prev(ch_27()) == 0)
 
 function ch_28() => byte(0xF7FF5777+dword(0xe7b054))/byte(0xF7FF5777)
-achievement ("Damageless", "Won the duel without taking any damage", 25, 
+achievement ("Damageless", "[Story Mode] Won the duel without taking any damage", 25, 
 trigger = save_protect_ch() && ch_28() == 1 && prev(ch_28()) == 0)
 
 function ch_29() => byte(0xF7FF5778+dword(0xe7b054))/byte(0xF7FF5778)
-achievement ("Single Turn Victory", "Caused 8,000 points or more of damage during turn and won the duel", 5, 
+achievement ("Single Turn Victory", "[Story Mode] Caused 8,000 points or more of damage during turn and won the duel", 5, 
 trigger = save_protect_ch() && ch_29() == 1 && prev(ch_29()) == 0)
 
 function ch_30() => byte(0xF7FF5779+dword(0xe7b054))/byte(0xF7FF5779)
-achievement ("Single Attack Victory", "Caused 8,000 points or more of damage with a single attack or effect and won the duel", 10, 
+achievement ("Single Attack Victory", "[Story Mode] Caused 8,000 points or more of damage with a single attack or effect and won the duel", 10, 
 trigger = save_protect_ch() && ch_30() == 1 && prev(ch_30()) == 0)
 
 function ch_31() => byte(0xF7FF577A+dword(0xe7b054))/byte(0xF7FF577A)
-achievement ("Out of Luck", "Made your opponent run out of cards and won the duel", 25, 
+achievement ("Out of Luck", "[Story Mode] Made your opponent run out of cards and won the duel", 25, 
 trigger = save_protect_ch() && ch_31() == 1 && prev(ch_31()) == 0)
 
 function ch_32() => byte(0xF7FF577B+dword(0xe7b054))/byte(0xF7FF577B)
-achievement ("Lucky 7", "Won within 7 turns", 5, 
+achievement ("Lucky 7", "[Story Mode] Won within 7 turns", 5, 
 trigger = save_protect_ch() && ch_32() == 1 && prev(ch_32()) == 0)
 
 function ch_33() => byte(0xF7FF577C+dword(0xe7b054))/byte(0xF7FF577C)
-achievement ("Fast Win", "Won within 5 turns", 10, 
+achievement ("Fast Win", "[Story Mode] Won within 5 turns", 10, 
 trigger = save_protect_ch() && ch_33() == 1 && prev(ch_33()) == 0)
 
 function ch_34() => byte(0xF7FF577D+dword(0xe7b054))/byte(0xF7FF577D)
-achievement ("Quick Win", "Won within 3 turns", 25, 
+achievement ("Quick Win", "[Story Mode] Won within 3 turns", 25, 
 trigger = save_protect_ch() && ch_34() == 1 && prev(ch_34()) == 0)
 
 function ch_35() => byte(0xF7FF577E+dword(0xe7b054))/byte(0xF7FF577E)
-achievement ("Defensive Victory", "Won during your opponent's turn", 5, 
+achievement ("Defensive Victory", "[Story Mode] Won during your opponent's turn", 5, 
 trigger = save_protect_ch() && ch_35() == 1 && prev(ch_35()) == 0)
 
 function ch_36() => byte(0xF7FF577F+dword(0xe7b054))/byte(0xF7FF577F)
-achievement ("Exodia the Forbidden One", "Won the duel using the effects of [Exodia the Forbidden One]", 10, 
+achievement ("Exodia the Forbidden One", "[Story Mode] Won the duel using the effects of [Exodia the Forbidden One]", 10, 
 trigger = save_protect_ch() && ch_36() == 1 && prev(ch_36()) == 0)
 
 function ch_37() => byte(0xF7FF5780+dword(0xe7b054))/byte(0xF7FF5780)
-achievement ("Destiny Board", "Won the duel using the effects of [Destiny Board]", 10, 
+achievement ("Destiny Board", "[Story Mode] Won the duel using the effects of [Destiny Board]", 10, 
 trigger = save_protect_ch() && ch_37() == 1 && prev(ch_37()) == 0)
 
 function ch_38() => byte(0xF7FF5781+dword(0xe7b054))/byte(0xF7FF5781)
-achievement ("Final Countdown", "Won the duel using the effects of [Final Countdown]", 10, 
+achievement ("Final Countdown", "[Story Mode] Won the duel using the effects of [Final Countdown]", 10, 
 trigger = save_protect_ch() && ch_38() == 1 && prev(ch_38()) == 0)
 
 function ch_39() => byte(0xF7FF5782+dword(0xe7b054))/byte(0xF7FF5782)
-achievement ("Odd Victory", "Won using a card with a match-winning effect", 10, 
+achievement ("Odd Victory", "[Story Mode] Won using a card with a match-winning effect", 10, 
 trigger = save_protect_ch() && ch_39() == 1 && prev(ch_39()) == 0)
 
 function ch_40() => byte(0xF7FF5783+dword(0xe7b054))/byte(0xF7FF5783)
-achievement ("Yata-Garasu", "Won with the [Yata-Garasu] lock", 10, 
+achievement ("Yata-Garasu", "[Story Mode] Won with the [Yata-Garasu] lock", 10, 
 trigger = save_protect_ch() && ch_40() == 1 && prev(ch_40()) == 0)
 
 function ch_41() => byte(0xF7FF5784+dword(0xe7b054))/byte(0xF7FF5784)
-achievement ("Vennominaga", "Won with [Vennominaga the Deity of Poisonous Snakes] effect", 10, 
+achievement ("Vennominaga", "[Story Mode] Won with [Vennominaga the Deity of Poisonous Snakes] effect", 10, 
 trigger = save_protect_ch() && ch_41() == 1 && prev(ch_41()) == 0)
 
 function ch_42() => byte(0xF7FF5785+dword(0xe7b054))/byte(0xF7FF5785)
-achievement ("Exodius", "Won with [Exodius the Ultimate Forbidden Lord] effect", 10,
+achievement ("Exodius", "[Story Mode] Won with [Exodius the Ultimate Forbidden Lord] effect", 10,
 trigger = save_protect_ch() && ch_42() == 1 && prev(ch_42()) == 0)
 
 function ch_43() => byte(0xF7FF5786+dword(0xe7b054))/byte(0xF7FF5786)
-achievement ("Last Turn", "Won with Last Turn] effect", 10, 
+achievement ("Last Turn", "[Story Mode] Won with Last Turn] effect", 10, 
 trigger = save_protect_ch() && ch_43() == 1 && prev(ch_43()) == 0)
 
 function ch_44() => byte(0xF7FF5787+dword(0xe7b054))/byte(0xF7FF5787)
-achievement ("Skull Servant", "Defeated your opponent with an attack from [Skull Servant]", 5, 
+achievement ("Skull Servant", "[Story Mode] Defeated your opponent with an attack from [Skull Servant]", 5, 
 trigger = save_protect_ch() && ch_44() == 1 && prev(ch_44()) == 0)
 
 function ch_45() => byte(0xF7FF5788+dword(0xe7b054))/byte(0xF7FF5788)
-achievement ("Sparks", "Finished with [Sparks] effect", 5, 
+achievement ("Sparks", "[Story Mode] Finished with [Sparks] effect", 5, 
 trigger = save_protect_ch() && ch_45() == 1 && prev(ch_45()) == 0)
 
 function ch_46() => byte(0xF7FF5789+dword(0xe7b054))/byte(0xF7FF5789)
-achievement ("Slash Draw", "Finished with [Slash Draw] effect", 5, 
+achievement ("Slash Draw", "[Story Mode] Finished with [Slash Draw] effect", 5, 
 trigger = save_protect_ch() && ch_46() == 1 && prev(ch_46()) == 0)
 
 function ch_47() => byte(0xF7FF578A+dword(0xe7b054))/byte(0xF7FF578A)
-achievement ("Ojama Delta Hurricane", "Successfully activated and maintained the effect of [Ojama Delta Hurricane!!] and won the duel", 10, 
+achievement ("Ojama Delta Hurricane", "[Story Mode] Successfully activated and maintained the effect of [Ojama Delta Hurricane!!] and won the duel", 10, 
 trigger = save_protect_ch() && ch_47() == 1 && prev(ch_47()) == 0)
 
 function ch_48() => byte(0xF7FF578B+dword(0xe7b054))/byte(0xF7FF578B)
-achievement ("Mega Ton Magical Cannon", "Use [Mega Ton Magical Cannon]", 5, 
+achievement ("Mega Ton Magical Cannon", "[Story Mode] Use [Mega Ton Magical Cannon]", 5, 
 trigger = save_protect_ch() && ch_48() == 1 && prev(ch_48()) == 0)
 
 function ch_49() => byte(0xF7FF578C+dword(0xe7b054))/byte(0xF7FF578C)
-achievement ("Des Coraking", "Use [Des Croaking]", 5, 
+achievement ("Des Coraking", "[Story Mode] Use [Des Croaking]", 5, 
 trigger = save_protect_ch() && ch_49() == 1 && prev(ch_49()) == 0)
 
 function ch_50() => byte(0xF7FF578D+dword(0xe7b054))/byte(0xF7FF578D)
-achievement ("Short Circuit", "Use [Short Circuit]", 5, 
+achievement ("Short Circuit", "[Story Mode] Use [Short Circuit]", 5, 
 trigger = save_protect_ch() && ch_50() == 1 && prev(ch_50()) == 0)
 
 function ch_51() => byte(0xF7FF578E+dword(0xe7b054))/byte(0xF7FF578E)
-achievement ("Huge Revolution", "Successfully activated and maintained the effect of [Huge Revolution] and won the Duel", 5, 
+achievement ("Huge Revolution", "[Story Mode] Successfully activated and maintained the effect of [Huge Revolution] and won the Duel", 5, 
 trigger = save_protect_ch() && ch_51() == 1 && prev(ch_51()) == 0)
 
 function ch_52() => byte(0xF7FF578F+dword(0xe7b054))/byte(0xF7FF578F)
-achievement ("Dark Scorpion", "Successfully activated and maintained the effect of [Dark Scorpion Combination]", 5, 
+achievement ("Dark Scorpion", "[Story Mode] Successfully activated and maintained the effect of [Dark Scorpion Combination]", 5, 
 trigger = save_protect_ch() && ch_52() == 1 && prev(ch_52()) == 0)
 
 function ch_53() => byte(0xF7FF5790+dword(0xe7b054))/byte(0xF7FF5790)
-achievement ("Dark Scorpion Retreat", "Use [Dark Scorpion Retreat]", 5, 
+achievement ("Dark Scorpion Retreat", "[Story Mode] Use [Dark Scorpion Retreat]", 5, 
 trigger = save_protect_ch() && ch_53() == 1 && prev(ch_53()) == 0)
 
 function ch_54() => byte(0xF7FF5791+dword(0xe7b054))/byte(0xF7FF5791)
-achievement ("Yu-Jo Friendship", "Use [Yu-Jo Friendship]", 5, 
+achievement ("Yu-Jo Friendship", "[Story Mode] Use [Yu-Jo Friendship]", 5, 
 trigger = save_protect_ch() && ch_54() == 1 && prev(ch_54()) == 0)
 
 function ch_55() => byte(0xF7FF5792+dword(0xe7b054))/byte(0xF7FF5792)
-achievement ("Blasting the Ruins", "Use [Blasting the Ruins]", 5, 
+achievement ("Blasting the Ruins", "[Story Mode] Use [Blasting the Ruins]", 5, 
 trigger = save_protect_ch() && ch_55() == 1 && prev(ch_55()) == 0)
 
 function ch_56() => byte(0xF7FF5793+dword(0xe7b054))/byte(0xF7FF5793)
-achievement ("The law of the Normal", "Use [The Law of the Normal]", 5, 
+achievement ("The law of the Normal", "[Story Mode] Use [The Law of the Normal]", 5, 
 trigger = save_protect_ch() && ch_56() == 1 && prev(ch_56()) == 0)
 
 function ch_57() => byte(0xF7FF5794+dword(0xe7b054))/byte(0xF7FF5794)
-achievement ("Inferno Tempest", "Use [Inferno Tempest]", 5, 
+achievement ("Inferno Tempest", "[Story Mode] Use [Inferno Tempest]", 5, 
 trigger = save_protect_ch() && ch_57() == 1 && prev(ch_57()) == 0)
 
 function ch_58() => byte(0xF7FF5795+dword(0xe7b054))/byte(0xF7FF5795)
-achievement ("Fuh-Rin-Ka-Zan", "Use [Fuh-Rin-Ka-Zan]", 5, 
+achievement ("Fuh-Rin-Ka-Zan", "[Story Mode] Use [Fuh-Rin-Ka-Zan]", 5, 
 trigger = save_protect_ch() && ch_58() == 1 && prev(ch_58()) == 0)
 
 function ch_59() => byte(0xF7FF5796+dword(0xe7b054))/byte(0xF7FF5796)
-achievement ("Elemental Burst", "Use [Elemental Burst]", 5, 
+achievement ("Elemental Burst", "[Story Mode] Use [Elemental Burst]", 5, 
 trigger = save_protect_ch() && ch_59() == 1 && prev(ch_59()) == 0)
 
 function ch_60() => byte(0xF7FF5797+dword(0xe7b054))/byte(0xF7FF5797)
-achievement ("Dragon Laser", "Use [Dragon Laser]", 5, 
+achievement ("Dragon Laser", "[Story Mode] Use [Dragon Laser]", 5, 
 trigger = save_protect_ch() && ch_60() == 1 && prev(ch_60()) == 0)
 
 function ch_61() => byte(0xF7FF5798+dword(0xe7b054))/byte(0xF7FF5798)
-achievement ("Magic Triangle of the Ice Barrier", "Used [Magic Triangle of the Ice Barrier]", 5, 
+achievement ("Magic Triangle of the Ice Barrier", "[Story Mode] Used [Magic Triangle of the Ice Barrier]", 5, 
 trigger = save_protect_ch() && ch_61() == 1 && prev(ch_61()) == 0)
 
 function ch_62() => byte(0xF7FF5799+dword(0xe7b054))/byte(0xF7FF5799)
-achievement ("XYZ Duelist", "Summoned every card in the XYZ Series and won the duel", 10, 
+achievement ("XYZ Duelist", "[Story Mode] Summoned every card in the XYZ Series and won the duel", 10, 
 trigger = save_protect_ch() && ch_62() == 1 && prev(ch_62()) == 0)
 
 function ch_63() => byte(0xF7FF579A+dword(0xe7b054))/byte(0xF7FF579A)
-achievement ("VWXYZ-Dragon Catapult Cannon", "Successfully Summoned [VWXYZ-Dragon Catapult Cannon] and won the duel", 10, 
+achievement ("VWXYZ-Dragon Catapult Cannon", "[Story Mode] Successfully Summoned [VWXYZ-Dragon Catapult Cannon] and won the duel", 10, 
 trigger = save_protect_ch() && ch_63() == 1 && prev(ch_63()) == 0)
 
 function ch_64() => byte(0xF7FF579B+dword(0xe7b054))/byte(0xF7FF579B)
-achievement ("Obelisk", "Summoned [Obelisk the Tormentor]", 5, 
+achievement ("Obelisk", "[Story Mode] Summoned [Obelisk the Tormentor]", 5, 
 trigger = save_protect_ch() && ch_64() == 1 && prev(ch_64()) == 0)
 
 function ch_65() => byte(0xF7FF579C+dword(0xe7b054))/byte(0xF7FF579C)
-achievement ("Slifer", "Summoned [Slifer the Sky Dragon]", 5, 
+achievement ("Slifer", "[Story Mode] Summoned [Slifer the Sky Dragon]", 5, 
 trigger = save_protect_ch() && ch_65() == 1 && prev(ch_65()) == 0)
 
 function ch_66() => byte(0xF7FF579D+dword(0xe7b054))/byte(0xF7FF579D)
-achievement ("Winged Dragon", "Summoned [The Winged Dragon of Ra]", 5, 
+achievement ("Winged Dragon", "[Story Mode] Summoned [The Winged Dragon of Ra]", 5, 
 trigger = save_protect_ch() && ch_66() == 1 && prev(ch_66()) == 0)
 
 function ch_67() => byte(0xF7FF579E+dword(0xe7b054))/byte(0xF7FF579E)
-achievement ("Divine-Beasts", "Summoned all 3 Divine-Beasts", 10, 
+achievement ("Divine-Beasts", "[Story Mode] Summoned all 3 Divine-Beasts", 10, 
 trigger = save_protect_ch() && ch_67() == 1 && prev(ch_67()) == 0)
 
 function ch_68() => byte(0xF7FF579F+dword(0xe7b054))/byte(0xF7FF579F)
-achievement ("Chaos Phantom", "Summoned [Armityle the Chaos Phantom]", 5, 
+achievement ("Chaos Phantom", "[Story Mode] Summoned [Armityle the Chaos Phantom]", 5, 
 trigger = save_protect_ch() && ch_68() == 1 && prev(ch_68()) == 0)
 
 function ch_69() => byte(0xF7FF57A0+dword(0xe7b054))/byte(0xF7FF57A0)
-achievement ("Uria", "Successfully Summoned [Uria, Lord of Searing Flames] and won the duel", 5, 
+achievement ("Uria", "[Story Mode] Successfully Summoned [Uria, Lord of Searing Flames] and won the duel", 5, 
 trigger = save_protect_ch() && ch_69() == 1 && prev(ch_69()) == 0)
 
 function ch_70() => byte(0xF7FF57A1+dword(0xe7b054))/byte(0xF7FF57A1)
-achievement ("Hamon", "Successfully Summoned [Hamon, Lord of Striking Thunder] and won the duel", 5, 
+achievement ("Hamon", "[Story Mode] Successfully Summoned [Hamon, Lord of Striking Thunder] and won the duel", 5, 
 trigger = save_protect_ch() && ch_70() == 1 && prev(ch_70()) == 0)
 
 function ch_71() => byte(0xF7FF57A2+dword(0xe7b054))/byte(0xF7FF57A2)
-achievement ("Raviel", "Successfully Summoned [Raviel, Lord of Phantasms] and won the duel", 5, 
+achievement ("Raviel", "[Story Mode] Successfully Summoned [Raviel, Lord of Phantasms] and won the duel", 5, 
 trigger = save_protect_ch() && ch_71() == 1 && prev(ch_71()) == 0)
 
 function ch_72() => byte(0xF7FF57A3+dword(0xe7b054))/byte(0xF7FF57A3)
-achievement ("Sacred Beast", "Summoned all the Sacred Beast Cards and won the duel", 10, 
+achievement ("Sacred Beast", "[Story Mode] Summoned all the Sacred Beast Cards and won the duel", 10, 
 trigger = save_protect_ch() && ch_72() == 1 && prev(ch_72()) == 0)
 
 function ch_73() => byte(0xF7FF57A4+dword(0xe7b054))/byte(0xF7FF57A4)
-achievement ("Wicked Dreadroot", "Summoned [The Wicked Dreadroot]", 5, 
+achievement ("Wicked Dreadroot", "[Story Mode] Summoned [The Wicked Dreadroot]", 5, 
 trigger = save_protect_ch() && ch_73() == 1 && prev(ch_73()) == 0)
 
 function ch_74() => byte(0xF7FF57A5+dword(0xe7b054))/byte(0xF7FF57A5)
-achievement ("Wicked Avatar", "Summoned [The Wicked Avatar]", 5, 
+achievement ("Wicked Avatar", "[Story Mode] Summoned [The Wicked Avatar]", 5, 
 trigger = save_protect_ch() && ch_74() == 1 && prev(ch_74()) == 0)
 
 function ch_75() => byte(0xF7FF57A6+dword(0xe7b054))/byte(0xF7FF57A6)
-achievement ("Wicked Eraser", "Summoned [The Wicked Eraser]", 5, 
+achievement ("Wicked Eraser", "[Story Mode] Summoned [The Wicked Eraser]", 5, 
 trigger = save_protect_ch() && ch_75() == 1 && prev(ch_75()) == 0)
 
 function ch_76() => byte(0xF7FF57A7+dword(0xe7b054))/byte(0xF7FF57A7)
-achievement ("Wicked Gods", "Summoned all 3 Wicked Gods", 10, 
+achievement ("Wicked Gods", "[Story Mode] Summoned all 3 Wicked Gods", 10, 
 trigger = save_protect_ch() && ch_76() == 1 && prev(ch_76()) == 0)
 
 function ch_77() => byte(0xF7FF57A8+dword(0xe7b054))/byte(0xF7FF57A8)
-achievement ("Aslla Piscu", "Summoned [Earthbound Immortal Aslla Piscu]", 5, 
+achievement ("Aslla Piscu", "[Story Mode] Summoned [Earthbound Immortal Aslla Piscu]", 5, 
 trigger = save_protect_ch() && ch_77() == 1 && prev(ch_77()) == 0)
 
 function ch_78() => byte(0xF7FF57A9+dword(0xe7b054))/byte(0xF7FF57A9)
-achievement ("Ccapac Apu", "Summoned [Earthbound Immortal Ccapac Apu]", 5, 
+achievement ("Ccapac Apu", "[Story Mode] Summoned [Earthbound Immortal Ccapac Apu]", 5, 
 trigger = save_protect_ch() && ch_78() == 1 && prev(ch_78()) == 0)
 
 function ch_79() => byte(0xF7FF57AA+dword(0xe7b054))/byte(0xF7FF57AA)
-achievement ("Cusillu", "Summoned [Earthbound Immortal Cusillu]", 5,
+achievement ("Cusillu", "[Story Mode] Summoned [Earthbound Immortal Cusillu]", 5,
 trigger = save_protect_ch() && ch_79() == 1 && prev(ch_79()) == 0)
 
 function ch_80() => byte(0xF7FF57AB+dword(0xe7b054))/byte(0xF7FF57AB)
-achievement ("Chacu Challhua", "Summoned [Earthbound Immortal Chacu Challhua]", 5, 
+achievement ("Chacu Challhua", "[Story Mode] Summoned [Earthbound Immortal Chacu Challhua]", 5, 
 trigger = save_protect_ch() && ch_80() == 1 && prev(ch_80()) == 0)
 
 function ch_81() => byte(0xF7FF57AC+dword(0xe7b054))/byte(0xF7FF57AC)
-achievement ("Ccarayhua", "Summoned [Earthbound Immortal Ccarayhua]", 5, 
+achievement ("Ccarayhua", "[Story Mode] Summoned [Earthbound Immortal Ccarayhua]", 5, 
 trigger = save_protect_ch() && ch_81() == 1 && prev(ch_81()) == 0)
 
 function ch_82() => byte(0xF7FF57AD+dword(0xe7b054))/byte(0xF7FF57AD)
-achievement ("Uru", "Summoned [Earthbound Immortal Uru]", 5, 
+achievement ("Uru", "[Story Mode] Summoned [Earthbound Immortal Uru]", 5, 
 trigger = save_protect_ch() && ch_82() == 1 && prev(ch_82()) == 0)
 
 function ch_83() => byte(0xF7FF57AE+dword(0xe7b054))/byte(0xF7FF57AE)
-achievement ("Wiraqocha Rasca", "Summoned [Earthbound Immortal Wiraqocha Rasca]", 5, 
+achievement ("Wiraqocha Rasca", "[Story Mode] Summoned [Earthbound Immortal Wiraqocha Rasca]", 5, 
 trigger = save_protect_ch() && ch_83() == 1 && prev(ch_83()) == 0)
 
 function ch_84() => byte(0xF7FF57AF+dword(0xe7b054))/byte(0xF7FF57AF)
-achievement ("Perfectly Ultimate Great Moth", "Successfully Summoned [Perfectly Ultimate Great Moth] and won the duel", 10, 
+achievement ("Perfectly Ultimate Great Moth", "[Story Mode] Successfully Summoned [Perfectly Ultimate Great Moth] and won the duel", 10, 
 trigger = save_protect_ch() && ch_84() == 1 && prev(ch_84()) == 0)
 
 function ch_85() => byte(0xF7FF57B0+dword(0xe7b054))/byte(0xF7FF57B0)
-achievement ("Gate Guardian", "Successfully Summoned [Gate Guardian] and won the duel", 10, 
+achievement ("Gate Guardian", "[Story Mode] Successfully Summoned [Gate Guardian] and won the duel", 10, 
 trigger = save_protect_ch() && ch_85() == 1 && prev(ch_85()) == 0)
 
 function ch_86() => byte(0xF7FF57B1+dword(0xe7b054))/byte(0xF7FF57B1)
-achievement ("Valkyrion the Magna Warrior", "Successfully Summoned [Valkyrion the Magna Warrior] and won the duel", 10, 
+achievement ("Valkyrion the Magna Warrior", "[Story Mode] Successfully Summoned [Valkyrion the Magna Warrior] and won the duel", 10, 
 trigger = save_protect_ch() && ch_86() == 1 && prev(ch_86()) == 0)
 
 function ch_87() => byte(0xF7FF57B2+dword(0xe7b054))/byte(0xF7FF57B2)
-achievement ("Dark Sage", "Successfully Summoned [Dark Sage] and won the duel", 10, 
+achievement ("Dark Sage", "[Story Mode] Successfully Summoned [Dark Sage] and won the duel", 10, 
 trigger = save_protect_ch() && ch_87() == 1 && prev(ch_87()) == 0)
 
 function ch_88() => byte(0xF7FF57B3+dword(0xe7b054))/byte(0xF7FF57B3)
-achievement ("Wall Shadow", "Summoned [Wall Shadow]", 5, 
+achievement ("Wall Shadow", "[Story Mode] Summoned [Wall Shadow]", 5, 
 trigger = save_protect_ch() && ch_88() == 1 && prev(ch_88()) == 0)
 
 function ch_89() => byte(0xF7FF57B4+dword(0xe7b054))/byte(0xF7FF57B4)
-achievement ("Blue-Eyes Ultimate Dragon", "Summoned [Blue-Eyes Ultimate Dragon]", 10, 
+achievement ("Blue-Eyes Ultimate Dragon", "[Story Mode] Summoned [Blue-Eyes Ultimate Dragon]", 10, 
 trigger = save_protect_ch() && ch_89() == 1 && prev(ch_89()) == 0)
 
 function ch_90() => byte(0xF7FF57B5+dword(0xe7b054))/byte(0xF7FF57B5)
-achievement ("Metalzoa", "Summoned [Metalzoa]", 5, 
+achievement ("Metalzoa", "[Story Mode] Summoned [Metalzoa]", 5, 
 trigger = save_protect_ch() && ch_90() == 1 && prev(ch_90()) == 0)
 
 function ch_91() => byte(0xF7FF57B6+dword(0xe7b054))/byte(0xF7FF57B6)
-achievement ("Red-Eyes Black Metal Dragon", "Summoned [Red-Eyes Black Metal Dragon]", 10, 
+achievement ("Red-Eyes Black Metal Dragon", "[Story Mode] Summoned [Red-Eyes Black Metal Dragon]", 10, 
 trigger = save_protect_ch() && ch_91() == 1 && prev(ch_91()) == 0)
 
 function ch_92() => byte(0xF7FF57B7+dword(0xe7b054))/byte(0xF7FF57B7)
-achievement ("Exodia Necross", "Summoned [Exodia Necross]", 5, 
+achievement ("Exodia Necross", "[Story Mode] Summoned [Exodia Necross]", 5, 
 trigger = save_protect_ch() && ch_92() == 1 && prev(ch_92()) == 0)
 
 function ch_93() => byte(0xF7FF57B8+dword(0xe7b054))/byte(0xF7FF57B8)
-achievement ("Ojama King", "Summoned [Ojama King]", 5, 
+achievement ("Ojama King", "[Story Mode] Summoned [Ojama King]", 5, 
 trigger = save_protect_ch() && ch_93() == 1 && prev(ch_93()) == 0)
 
 function ch_94() => byte(0xF7FF57B9+dword(0xe7b054))/byte(0xF7FF57B9)
-achievement ("Mokey Mokey King", "Summoned [Mokey Mokey King]", 5, 
+achievement ("Mokey Mokey King", "[Story Mode] Summoned [Mokey Mokey King]", 5, 
 trigger = save_protect_ch() && ch_94() == 1 && prev(ch_94()) == 0)
 
 function ch_95() => byte(0xF7FF57BA+dword(0xe7b054))/byte(0xF7FF57BA)
-achievement ("Chimeratech Overdragon", "Summoned [Chimeratech Overdragon]", 5, 
+achievement ("Chimeratech Overdragon", "[Story Mode] Summoned [Chimeratech Overdragon]", 5, 
 trigger = save_protect_ch() && ch_95() == 1 && prev(ch_95()) == 0)
 
 function ch_96() => byte(0xF7FF57BB+dword(0xe7b054))/byte(0xF7FF57BB)
-achievement ("Gaia Drake, the Universal Force", "Summoned [Gaia Drake, the Universal Force]", 10, 
+achievement ("Gaia Drake, the Universal Force", "[Story Mode] Summoned [Gaia Drake, the Universal Force]", 10, 
 trigger = save_protect_ch() && ch_96() == 1 && prev(ch_96()) == 0)
 
 function ch_97() => byte(0xF7FF57BC+dword(0xe7b054))/byte(0xF7FF57BC)
-achievement ("Sun & Moon", "Summoned [Sun Dragon Inti] and [Moon Dragon Quilla]", 5, 
+achievement ("Sun & Moon", "[Story Mode] Summoned [Sun Dragon Inti] and [Moon Dragon Quilla]", 5, 
 trigger = save_protect_ch() && ch_97() == 1 && prev(ch_97()) == 0)
 
 function ch_98() => byte(0xF7FF57BD+dword(0xe7b054))/byte(0xF7FF57BD)
-achievement ("Infernity Zero", "Summoned [Infernity Zero]", 5, 
+achievement ("Infernity Zero", "[Story Mode] Summoned [Infernity Zero]", 5, 
 trigger = save_protect_ch() && ch_98() == 1 && prev(ch_98()) == 0)
 
 function ch_99() => byte(0xF7FF57BE+dword(0xe7b054))/byte(0xF7FF57BE)
-achievement ("Tech Genus Blade Blaster", "Summoned [Tech Genus Blade Blaster]", 5, 
+achievement ("Tech Genus Blade Blaster", "[Story Mode] Summoned [Tech Genus Blade Blaster]", 5, 
 trigger = save_protect_ch() && ch_99() == 1 && prev(ch_99()) == 0)
 
 function ch_100() => byte(0xF7FF57BF+dword(0xe7b054))/byte(0xF7FF57BF)
-achievement ("Majestic Star Dragon", "Summoned [Majestic Star Dragon]", 5, 
+achievement ("Majestic Star Dragon", "[Story Mode] Summoned [Majestic Star Dragon]", 5, 
 trigger = save_protect_ch() && ch_100() == 1 && prev(ch_100()) == 0)
 
 function ch_101() => byte(0xF7FF57C0+dword(0xe7b054))/byte(0xF7FF57C0)
-achievement ("Majestic Red Dragon", "Summoned [Majestic Red Dragon]", 5, 
+achievement ("Majestic Red Dragon", "[Story Mode] Summoned [Majestic Red Dragon]", 5, 
 trigger = save_protect_ch() && ch_101() == 1 && prev(ch_101()) == 0)
 
 function ch_102() => byte(0xF7FF57C1+dword(0xe7b054))/byte(0xF7FF57C1)
-achievement ("Shooting Star Dragon", "Summoned [Shooting Star Dragon]", 5, 
+achievement ("Shooting Star Dragon", "[Story Mode] Summoned [Shooting Star Dragon]", 5, 
 trigger = save_protect_ch() && ch_102() == 1 && prev(ch_102()) == 0)
 
 function ch_103() => byte(0xF7FF57C2+dword(0xe7b054))/byte(0xF7FF57C2)
-achievement ("Red Nova Dragon", "Summoned [Red Nova Dragon]", 5, 
+achievement ("Red Nova Dragon", "[Story Mode] Summoned [Red Nova Dragon]", 5, 
 trigger = save_protect_ch() && ch_103() == 1 && prev(ch_103()) == 0)
 
 function ch_104() => byte(0xF7FF57C3+dword(0xe7b054))/byte(0xF7FF57C3)
-achievement ("Wisel", "Assembled the [Meklord Emperor Wisel] Series on your side of the field", 5, 
+achievement ("Wisel", "[Story Mode] Assembled the [Meklord Emperor Wisel] Series on your side of the field", 5, 
 trigger = save_protect_ch() && ch_104() == 1 && prev(ch_104()) == 0)
 
 function ch_105() => byte(0xF7FF57C4+dword(0xe7b054))/byte(0xF7FF57C4)
-achievement ("Skiel", "Assembled the [Meklord Emperor Skiel] Series on your side of the field", 5, 
+achievement ("Skiel", "[Story Mode] Assembled the [Meklord Emperor Skiel] Series on your side of the field", 5, 
 trigger = save_protect_ch() && ch_105() == 1 && prev(ch_105()) == 0)
 
 function ch_106() => byte(0xF7FF57C5+dword(0xe7b054))/byte(0xF7FF57C5)
-achievement ("Grannel", "Assembled the [Meklord Emperor Grannel] Series on your side of the field", 5, 
+achievement ("Grannel", "[Story Mode] Assembled the [Meklord Emperor Grannel] Series on your side of the field", 5, 
 trigger = save_protect_ch() && ch_106() == 1 && prev(ch_106()) == 0)
 
 function ch_107() => byte(0xF7FF57C6+dword(0xe7b054))/byte(0xF7FF57C6)
-achievement ("Dragon Team", "Summoned the Dragons of Yusei, Jack, Crow, Akiza, Leo and Luna", 5, 
+achievement ("Dragon Team", "[Story Mode] Summoned the Dragons of Yusei, Jack, Crow, Akiza, Leo and Luna", 5, 
 trigger = save_protect_ch() && ch_107() == 1 && prev(ch_107()) == 0)
 
 function ch_108() => byte(0xF7FF57C7+dword(0xe7b054))/byte(0xF7FF57C7)
-achievement ("Dragon Side", "Summoned the Dragons of Yusei, Jack, Crow, Akiza, Leo and Luna on your side of the field", 5, 
+achievement ("Dragon Side", "[Story Mode] Summoned the Dragons of Yusei, Jack, Crow, Akiza, Leo and Luna on your side of the field", 5, 
 trigger = save_protect_ch() && ch_108() == 1 && prev(ch_108()) == 0)
 
 function ch_109() => byte(0xF7FF57C8+dword(0xe7b054))/byte(0xF7FF57C8)
-achievement ("Normal Monsters", "Won with 25 or more Normal Monsters in Deck", 5, 
+achievement ("Normal Monsters", "[Story Mode] Won with 25 or more Normal Monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_109() == 1 && prev(ch_109()) == 0)
 
 function ch_110() => byte(0xF7FF57C9+dword(0xe7b054))/byte(0xF7FF57C9)
-achievement ("Four & Lower", "Won with 25 or more monsters of level 4 or lower in Deck", 5, 
+achievement ("Four & Lower", "[Story Mode] Won with 25 or more monsters of level 4 or lower in Deck", 5, 
 trigger = save_protect_ch() && ch_110() == 1 && prev(ch_110()) == 0)
 
 function ch_111() => byte(0xF7FF57CA+dword(0xe7b054))/byte(0xF7FF57CA)
-achievement ("Five & Higher", "Won with 25 or more monsters of level 5 or higher in Deck", 5, 
+achievement ("Five & Higher", "[Story Mode] Won with 25 or more monsters of level 5 or higher in Deck", 5, 
 trigger = save_protect_ch() && ch_111() == 1 && prev(ch_111()) == 0)
 
 function ch_112() => byte(0xF7FF57CB+dword(0xe7b054))/byte(0xF7FF57CB)
-achievement ("Level One", "Won with 25 or more level 1 monsters in Deck", 10, 
+achievement ("Level One", "[Story Mode] Won with 25 or more level 1 monsters in Deck", 10, 
 trigger = save_protect_ch() && ch_112() == 1 && prev(ch_112()) == 0)
 
 function ch_113() => byte(0xF7FF57CC+dword(0xe7b054))/byte(0xF7FF57CC)
-achievement ("Some of Everything", "Won with a Deck that contained monsters of every Level", 10, 
+achievement ("Some of Everything", "[Story Mode] Won with a Deck that contained monsters of every Level", 10, 
 trigger = save_protect_ch() && ch_113() == 1 && prev(ch_113()) == 0)
 
 function ch_114() => byte(0xF7FF57CD+dword(0xe7b054))/byte(0xF7FF57CD)
-achievement ("1500 Max", "Won with 25 or more monsters with at most ATK 1500 in Deck", 5, 
+achievement ("1500 Max", "[Story Mode] Won with 25 or more monsters with at most ATK 1500 in Deck", 5, 
 trigger = save_protect_ch() && ch_114() == 1 && prev(ch_114()) == 0)
 
 function ch_115() => byte(0xF7FF57CE+dword(0xe7b054))/byte(0xF7FF57CE)
-achievement ("1500 Min", "Won with 25 or more monsters with at least ATK 1500 in Deck", 5,
+achievement ("1500 Min", "[Story Mode] Won with 25 or more monsters with at least ATK 1500 in Deck", 5,
 trigger = save_protect_ch() && ch_115() == 1 && prev(ch_115()) == 0)
 
 function ch_116() => byte(0xF7FF57CF+dword(0xe7b054))/byte(0xF7FF57CF)
-achievement ("ZDPS", "Won with 25 or more monsters with 0 ATK in Deck", 5, 
+achievement ("ZDPS", "[Story Mode] Won with 25 or more monsters with 0 ATK in Deck", 5, 
 trigger = save_protect_ch() && ch_116() == 1 && prev(ch_116()) == 0)
 
 function ch_117() => byte(0xF7FF57D0+dword(0xe7b054))/byte(0xF7FF57D0)
-achievement ("Light Deck", "Won with 25 or more LIGHT monsters in Deck", 5, 
+achievement ("Light Deck", "[Story Mode] Won with 25 or more LIGHT monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_117() == 1 && prev(ch_117()) == 0)
 
 function ch_118() => byte(0xF7FF57D1+dword(0xe7b054))/byte(0xF7FF57D1)
-achievement ("Dark Deck", "Won with 25 or more DARK monsters in Deck", 5, 
+achievement ("Dark Deck", "[Story Mode] Won with 25 or more DARK monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_118() == 1 && prev(ch_118()) == 0)
 
 function ch_119() => byte(0xF7FF57D2+dword(0xe7b054))/byte(0xF7FF57D2)
-achievement ("Water Deck", "Won with 25 or more WATER monsters in Deck", 5, 
+achievement ("Water Deck", "[Story Mode] Won with 25 or more WATER monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_119() == 1 && prev(ch_119()) == 0)
 
 function ch_120() => byte(0xF7FF57D3+dword(0xe7b054))/byte(0xF7FF57D3)
-achievement ("Fire Deck", "Won with 25 or more FIRE monsters in Deck", 5, 
+achievement ("Fire Deck", "[Story Mode] Won with 25 or more FIRE monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_120() == 1 && prev(ch_120()) == 0)
 
 function ch_121() => byte(0xF7FF57D4+dword(0xe7b054))/byte(0xF7FF57D4)
-achievement ("Earth Deck", "Won with 25 or more EARTH monsters in Deck", 5, 
+achievement ("Earth Deck", "[Story Mode] Won with 25 or more EARTH monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_121() == 1 && prev(ch_121()) == 0)
 
 function ch_122() => byte(0xF7FF57D5+dword(0xe7b054))/byte(0xF7FF57D5)
-achievement ("Wind Deck", "Won with 25 or more WIND monsters in Deck", 5, 
+achievement ("Wind Deck", "[Story Mode] Won with 25 or more WIND monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_122() == 1 && prev(ch_122()) == 0)
 
 function ch_123() => byte(0xF7FF57D6+dword(0xe7b054))/byte(0xF7FF57D6)
-achievement ("Dragon Deck", "Won with 25 or more Dragon monsters in Deck", 5, 
+achievement ("Dragon Deck", "[Story Mode] Won with 25 or more Dragon monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_123() == 1 && prev(ch_123()) == 0)
 
 function ch_124() => byte(0xF7FF57D7+dword(0xe7b054))/byte(0xF7FF57D7)
-achievement ("Zombie Deck", "Won with 25 or more Zombie monsters in Deck", 5, 
+achievement ("Zombie Deck", "[Story Mode] Won with 25 or more Zombie monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_124() == 1 && prev(ch_124()) == 0)
 
 function ch_125() => byte(0xF7FF57D8+dword(0xe7b054))/byte(0xF7FF57D8)
-achievement ("Fiend Deck", "Won with 25 or more Fiend monsters in Deck", 5, 
+achievement ("Fiend Deck", "[Story Mode] Won with 25 or more Fiend monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_125() == 1 && prev(ch_125()) == 0)
 
 function ch_126() => byte(0xF7FF57D9+dword(0xe7b054))/byte(0xF7FF57D9)
-achievement ("Pyro Deck", "Won with 25 or more Pyro monsters in Deck", 5, 
+achievement ("Pyro Deck", "[Story Mode] Won with 25 or more Pyro monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_126() == 1 && prev(ch_126()) == 0)
 
 function ch_127() => byte(0xF7FF57DA+dword(0xe7b054))/byte(0xF7FF57DA)
-achievement ("Sea Serpent Deck", "Won with 25 or more Sea Serpent monsters in Deck", 5, 
+achievement ("Sea Serpent Deck", "[Story Mode] Won with 25 or more Sea Serpent monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_127() == 1 && prev(ch_127()) == 0)
 
 function ch_128() => byte(0xF7FF57DB+dword(0xe7b054))/byte(0xF7FF57DB)
-achievement ("Rock Deck", "Won with 25 or more Rock monsters in Deck", 5, 
+achievement ("Rock Deck", "[Story Mode] Won with 25 or more Rock monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_128() == 1 && prev(ch_128()) == 0)
 
 function ch_129() => byte(0xF7FF57DC+dword(0xe7b054))/byte(0xF7FF57DC)
-achievement ("Machine Deck", "Won with 25 or more Machine monsters in Deck", 5, 
+achievement ("Machine Deck", "[Story Mode] Won with 25 or more Machine monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_129() == 1 && prev(ch_129()) == 0)
 
 function ch_130() => byte(0xF7FF57DD+dword(0xe7b054))/byte(0xF7FF57DD)
-achievement ("Fish Deck", "Won with 25 or more Fish monsters in Deck", 5, 
+achievement ("Fish Deck", "[Story Mode] Won with 25 or more Fish monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_130() == 1 && prev(ch_130()) == 0)
 
 function ch_131() => byte(0xF7FF57DE+dword(0xe7b054))/byte(0xF7FF57DE)
-achievement ("Dinosaur Deck", "Won with 25 or more Dinosaur monsters in Deck", 5, 
+achievement ("Dinosaur Deck", "[Story Mode] Won with 25 or more Dinosaur monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_131() == 1 && prev(ch_131()) == 0)
 
 function ch_132() => byte(0xF7FF57DF+dword(0xe7b054))/byte(0xF7FF57DF)
-achievement ("Insect Deck", "Won with 25 or more Insect monsters in Deck", 5, 
+achievement ("Insect Deck", "[Story Mode] Won with 25 or more Insect monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_132() == 1 && prev(ch_132()) == 0)
 
 function ch_133() => byte(0xF7FF57E0+dword(0xe7b054))/byte(0xF7FF57E0)
-achievement ("Beast Deck", "Won with 25 or more Beast monsters in Deck", 5, 
+achievement ("Beast Deck", "[Story Mode] Won with 25 or more Beast monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_133() == 1 && prev(ch_133()) == 0)
 
 function ch_134() => byte(0xF7FF57E1+dword(0xe7b054))/byte(0xF7FF57E1)
-achievement ("Beast-Warrior Deck", "Won with 25 or more Beast-Warrior monsters in Deck", 5, 
+achievement ("Beast-Warrior Deck", "[Story Mode] Won with 25 or more Beast-Warrior monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_134() == 1 && prev(ch_134()) == 0)
 
 function ch_135() => byte(0xF7FF57E2+dword(0xe7b054))/byte(0xF7FF57E2)
-achievement ("Plant Deck", "Won with 25 or more Plant monsters in Deck", 5, 
+achievement ("Plant Deck", "[Story Mode] Won with 25 or more Plant monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_135() == 1 && prev(ch_135()) == 0)
 
 function ch_136() => byte(0xF7FF57E3+dword(0xe7b054))/byte(0xF7FF57E3)
-achievement ("Aqua Deck", "Won with 25 or more Aqua monsters in Deck", 5, 
+achievement ("Aqua Deck", "[Story Mode] Won with 25 or more Aqua monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_136() == 1 && prev(ch_136()) == 0)
 
 function ch_137() => byte(0xF7FF57E4+dword(0xe7b054))/byte(0xF7FF57E4)
-achievement ("Warrior Deck", "Won with 25 or more Warrior monsters in Deck", 5, 
+achievement ("Warrior Deck", "[Story Mode] Won with 25 or more Warrior monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_137() == 1 && prev(ch_137()) == 0)
 
 function ch_138() => byte(0xF7FF57E5+dword(0xe7b054))/byte(0xF7FF57E5)
-achievement ("Winged Beast Deck", "Won with 25 or more Winged Beast monsters in Deck", 5, 
+achievement ("Winged Beast Deck", "[Story Mode] Won with 25 or more Winged Beast monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_138() == 1 && prev(ch_138()) == 0)
 
 function ch_139() => byte(0xF7FF57E6+dword(0xe7b054))/byte(0xF7FF57E6)
-achievement ("Fairy Deck", "Won with 25 or more Fairy monsters in Deck", 5, 
+achievement ("Fairy Deck", "[Story Mode] Won with 25 or more Fairy monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_139() == 1 && prev(ch_139()) == 0)
 
 function ch_140() => byte(0xF7FF57E7+dword(0xe7b054))/byte(0xF7FF57E7)
-achievement ("Spellcaster Deck", "Won with 25 or more Spellcaster monsters in Deck", 5, 
+achievement ("Spellcaster Deck", "[Story Mode] Won with 25 or more Spellcaster monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_140() == 1 && prev(ch_140()) == 0)
 
 function ch_141() => byte(0xF7FF57E8+dword(0xe7b054))/byte(0xF7FF57E8)
-achievement ("Thunder Deck", "Won with 25 or more Thunder monsters in Deck", 5, 
+achievement ("Thunder Deck", "[Story Mode] Won with 25 or more Thunder monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_141() == 1 && prev(ch_141()) == 0)
 
 function ch_142() => byte(0xF7FF57E9+dword(0xe7b054))/byte(0xF7FF57E9)
-achievement ("Reptile Deck", "Won with 25 or more Reptile monsters in Deck", 5, 
+achievement ("Reptile Deck", "[Story Mode] Won with 25 or more Reptile monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_142() == 1 && prev(ch_142()) == 0)
 
 function ch_143() => byte(0xF7FF57EA+dword(0xe7b054))/byte(0xF7FF57EA)
-achievement ("Psychic Deck", "Won with 25 or more Psychic monsters in Deck", 5, 
+achievement ("Psychic Deck", "[Story Mode] Won with 25 or more Psychic monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_143() == 1 && prev(ch_143()) == 0)
 
 function ch_144() => byte(0xF7FF57EB+dword(0xe7b054))/byte(0xF7FF57EB)
-achievement ("Divine-Beast Deck", "Won with all types of Divine-Beast monsters in Deck", 5, 
+achievement ("Divine-Beast Deck", "[Story Mode] Won with all types of Divine-Beast monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_144() == 1 && prev(ch_144()) == 0)
 
 function ch_145() => byte(0xF7FF57EC+dword(0xe7b054))/byte(0xF7FF57EC)
-achievement ("Mix it Up", "Won with all monster types in Deck", 5, 
+achievement ("Mix it Up", "[Story Mode] Won with all monster types in Deck", 5, 
 trigger = save_protect_ch() && ch_145() == 1 && prev(ch_145()) == 0)
 
 function ch_146() => byte(0xF7FF57ED+dword(0xe7b054))/byte(0xF7FF57ED)
-achievement ("LV Deck", "Won with 25 or more LV monsters in Deck", 5, 
+achievement ("LV Deck", "[Story Mode] Won with 25 or more LV monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_146() == 1 && prev(ch_146()) == 0)
 
 function ch_147() => byte(0xF7FF57EE+dword(0xe7b054))/byte(0xF7FF57EE)
-achievement ("Elemental Hero Deck", "Won with 25 or more Elemental Hero monsters in Deck", 5, 
+achievement ("Elemental Hero Deck", "[Story Mode] Won with 25 or more Elemental Hero monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_147() == 1 && prev(ch_147()) == 0)
 
 function ch_148() => byte(0xF7FF57EF+dword(0xe7b054))/byte(0xF7FF57EF)
-achievement ("Evil Hero Deck", "Won with 9 or more Evil Hero monsters in Deck", 5, 
+achievement ("Evil Hero Deck", "[Story Mode] Won with 9 or more Evil Hero monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_148() == 1 && prev(ch_148()) == 0)
 
 function ch_149() => byte(0xF7FF57F0+dword(0xe7b054))/byte(0xF7FF57F0)
-achievement ("Destiny Hero Deck", "Won with 25 or more Destiny Hero monsters in Deck", 5, 
+achievement ("Destiny Hero Deck", "[Story Mode] Won with 25 or more Destiny Hero monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_149() == 1 && prev(ch_149()) == 0)
 
 function ch_150() => byte(0xF7FF57F1+dword(0xe7b054))/byte(0xF7FF57F1)
-achievement ("Spirit Deck", "Won with 25 or more Spirit monsters in Deck", 5, 
+achievement ("Spirit Deck", "[Story Mode] Won with 25 or more Spirit monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_150() == 1 && prev(ch_150()) == 0)
 
 function ch_151() => byte(0xF7FF57F2+dword(0xe7b054))/byte(0xF7FF57F2)
-achievement ("Toon Deck", "Won with 20 or more Toon monsters in Deck", 5, 
+achievement ("Toon Deck", "[Story Mode] Won with 20 or more Toon monsters in Deck", 5, 
 trigger = save_protect_ch() && ch_151() == 1 && prev(ch_151()) == 0)
 
 function ch_152() => byte(0xF7FF57F3+dword(0xe7b054))/byte(0xF7FF57F3)
-achievement ("Simplistic", "Won with a Deck that didn't contain any monsters", 10, 
+achievement ("Simplistic", "[Story Mode] Won with a Deck that didn't contain any monsters", 10, 
 trigger = save_protect_ch() && ch_152() == 1 && prev(ch_152()) == 0)
 
 function ch_153() => byte(0xF7FF57F4+dword(0xe7b054))/byte(0xF7FF57F4)
-achievement ("Monster Free ", "Won with a Deck/Extra Deck that didn't contain any monsters", 10, 
+achievement ("Monster Free ", "[Story Mode] Won with a Deck/Extra Deck that didn't contain any monsters", 10, 
 trigger = save_protect_ch() && ch_153() == 1 && prev(ch_153()) == 0)
 
 function ch_154() => byte(0xF7FF57F5+dword(0xe7b054))/byte(0xF7FF57F5)
-achievement ("Trap Free", "Won with a Deck that didn't contain any Trap Cards", 5, 
+achievement ("Trap Free", "[Story Mode] Won with a Deck that didn't contain any Trap Cards", 5, 
 trigger = save_protect_ch() && ch_154() == 1 && prev(ch_154()) == 0)
 
 function ch_155() => byte(0xF7FF57F6+dword(0xe7b054))/byte(0xF7FF57F6)
-achievement ("Spell Free", "Won with a Deck that didn't contain any Spell Cards", 5, 
+achievement ("Spell Free", "[Story Mode] Won with a Deck that didn't contain any Spell Cards", 5, 
 trigger = save_protect_ch() && ch_155() == 1 && prev(ch_155()) == 0)
 
 function ch_156() => byte(0xF7FF57F7+dword(0xe7b054))/byte(0xF7FF57F7)
-achievement ("No Assistance", "Won with a Deck that didn't contain any Spell and Trap Cards", 10, 
+achievement ("No Assistance", "[Story Mode] Won with a Deck that didn't contain any Spell and Trap Cards", 10, 
 trigger = save_protect_ch() && ch_156() == 1 && prev(ch_156()) == 0)
 
 function ch_157() => byte(0xF7FF57F8+dword(0xe7b054))/byte(0xF7FF57F8)
-achievement ("Fully Loaded", "Won with 60-card Deck", 5, 
+achievement ("Fully Loaded", "[Story Mode] Won with 60-card Deck", 5, 
 trigger = save_protect_ch() && ch_157() == 1 && prev(ch_157()) == 0)
 
 function ch_158() => byte(0xF7FF57F9+dword(0xe7b054))/byte(0xF7FF57F9)
-achievement ("Rule Follower", "Won with a Deck/Extra Deck that didn't contain any Forbidden, Limited, or Semi-Limited Cards", 5, 
+achievement ("Rule Follower", "[Story Mode] Won with a Deck/Extra Deck that didn't contain any Forbidden, Limited, or Semi-Limited Cards", 5, 
 trigger = save_protect_ch() && ch_158() == 1 && prev(ch_158()) == 0)
 
 function ch_159() => byte(0xF7FF57FA+dword(0xe7b054))/byte(0xF7FF57FA)
-achievement ("Rule Breaker", "Won with a Forbidden Card in Deck/Extra Deck", 5, 
+achievement ("Rule Breaker", "[Story Mode] Won with a Forbidden Card in Deck/Extra Deck", 5, 
 trigger = save_protect_ch() && ch_159() == 1 && prev(ch_159()) == 0)
 
 function ch_160() => byte(0xF7FF57FB+dword(0xe7b054))/byte(0xF7FF57FB)
-achievement ("Single Use", "Won with a Deck/Extra Deck that only contained one copy of each card", 10, 
+achievement ("Single Use", "[Story Mode] Won with a Deck/Extra Deck that only contained one copy of each card", 10, 
 trigger = save_protect_ch() && ch_160() == 1 && prev(ch_160()) == 0)
 
 function ch_161() => byte(0xF7FF57FC+dword(0xe7b054))/byte(0xF7FF57FC)
-achievement ("No Sacrifice", "Won without Tributing any monsters", 10, 
+achievement ("No Sacrifice", "[Story Mode] Won without Tributing any monsters", 10, 
 trigger = save_protect_ch() && ch_161() == 1 && prev(ch_161()) == 0)
 
 function ch_162() => byte(0xF7FF57FD+dword(0xe7b054))/byte(0xF7FF57FD)
-achievement ("No Special Summon", "Won without performing a Special Summon", 10, 
+achievement ("No Special Summon", "[Story Mode] Won without performing a Special Summon", 10, 
 trigger = save_protect_ch() && ch_162() == 1 && prev(ch_162()) == 0)
 
 function ch_163() => byte(0xF7FF57FE+dword(0xe7b054))/byte(0xF7FF57FE)
-achievement ("No Normal Summon", "Won without performing a Normal Summon or set", 10, 
+achievement ("No Normal Summon", "[Story Mode] Won without performing a Normal Summon or set", 10, 
 trigger = save_protect_ch() && ch_163() == 1 && prev(ch_163()) == 0)
 
 function ch_164() => byte(0xF7FF57FF+dword(0xe7b054))/byte(0xF7FF57FF)
-achievement ("Ten to Zero", "Won 10 or more coin tosses in a row", 25, 
+achievement ("Ten to Zero", "[Story Mode] Won 10 or more coin tosses in a row", 25, 
 trigger = save_protect_ch() && ch_164() == 1 && prev(ch_164()) == 0)
 
 
